@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张凌赫小红书动态日报 | 2026年3月18日</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container { max-width: 920px; margin: 0 auto; }
+
+    /* 头部 */
+    .header {
+      background: rgba(255,255,255,0.97);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ff6b6b, #ee5a24, #f0932b, #6ab04c, #22a6b3, #4834d4, #be2edd);
+    }
+    .header h1 { font-size: 28px; color: #2d3436; margin-bottom: 8px; font-weight: 700; }
+    .header .subtitle { font-size: 15px; color: #636e72; margin-bottom: 16px; }
+    .header .date-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white; padding: 6px 20px; border-radius: 20px; font-size: 14px; font-weight: 500;
+    }
+
+    /* 数据概览 */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.97);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .stat-card:hover { transform: translateY(-2px); }
+    .stat-number {
+      font-size: 32px; font-weight: 700;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .stat-label { font-size: 13px; color: #636e72; margin-top: 4px; }
+
+    /* 通用区块 */
+    .section {
+      background: rgba(255,255,255,0.97);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .section-title {
+      font-size: 20px; font-weight: 700; color: #2d3436;
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title .icon { font-size: 24px; }
+    .section-title .badge {
+      font-size: 12px; background: #667eea; color: white;
+      padding: 2px 10px; border-radius: 10px; font-weight: 500;
+    }
+
+    /* 今日动态一览 */
+    .overview-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    .overview-item:last-child { border-bottom: none; }
+    .overview-num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white; font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .overview-text { font-size: 14px; color: #2d3436; line-height: 1.6; }
+    .overview-text strong { color: #4834d4; }
+
+    /* 总结分析块 */
+    .analysis-block {
+      background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
+      border-left: 3px solid #667eea;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .analysis-title {
+      font-size: 14px; font-weight: 700; color: #4834d4;
+      margin-bottom: 6px;
+    }
+    .analysis-text {
+      font-size: 15px; color: #555; line-height: 1.7;
+    }
+    .analysis-text strong {
+      color: #2d3436; display: block; margin-top: 8px; margin-bottom: 2px;
+    }
+    .analysis-text strong:first-child { margin-top: 0; }
+
+    /* 用户原话 */
+    .inline-quote {
+      font-size: 13px;
+      color: #888;
+      font-style: italic;
+      line-height: 1.5;
+      padding: 4px 0 4px 12px;
+      border-left: 2px solid #ddd;
+      margin: 5px 0;
+    }
+    .inline-quote a { color: #667eea; text-decoration: none; font-style: normal; font-size: 12px; }
+    .inline-quote a:hover { text-decoration: underline; }
+    .inline-quote .quote-title { color: #4834d4; font-style: normal; font-weight: 500; font-size: 12px; }
+    .inline-quote .quote-title:hover { text-decoration: underline; }
+
+    /* 笔记列表折叠/展开 */
+    .notes-details {
+      margin-top: 12px;
+    }
+    .notes-details summary {
+      cursor: pointer;
+      font-size: 13px;
+      color: #667eea;
+      font-weight: 600;
+      padding: 8px 14px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+      transition: all 0.2s;
+      background: linear-gradient(135deg, #f8f9ff, #f0f4ff);
+      border-radius: 8px;
+      border: 1px solid #e8ecff;
+    }
+    .notes-details summary::-webkit-details-marker { display: none; }
+    .notes-details summary::before {
+      content: '▶';
+      font-size: 10px;
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    .notes-details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .notes-details[open] summary {
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid #e8ecff;
+    }
+    .notes-details summary:hover {
+      color: #4834d4;
+      background: linear-gradient(135deg, #f0f2ff, #e8ecff);
+    }
+    .notes-details .notes-list {
+      margin-top: 0;
+      animation: fadeIn 0.25s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 发布时间 */
+    .note-time {
+      font-size: 11px; color: #b0b0b0; margin-left: 6px; font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    /* Top10 热门榜单 */
+    .top10-section { margin-bottom: 20px; }
+    .top10-row {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .top10-row:hover { background: #f5f5fa; }
+    .top10-rank {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; color: white; flex-shrink: 0;
+    }
+    .top10-rank.rank-1 { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+    .top10-rank.rank-2 { background: linear-gradient(135deg, #f0932b, #f39c12); }
+    .top10-rank.rank-3 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .top10-rank.rank-other { background: #c0c0c0; }
+    .top10-info { flex: 1; min-width: 0; }
+    .top10-title {
+      font-size: 14px; font-weight: 600; color: #2d3436;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .top10-title a { color: #2d3436; text-decoration: none; }
+    .top10-title a:hover { color: #667eea; }
+    .top10-author { font-size: 12px; color: #999; margin-top: 2px; }
+    .top10-heat {
+      display: flex; gap: 8px; font-size: 12px; color: #636e72;
+      flex-shrink: 0; align-items: center;
+    }
+    .top10-heat .fire { font-size: 14px; }
+    .top10-divider { height: 1px; background: #f0f0f0; margin: 0 12px; }
+
+    /* 笔记列表 */
+    .notes-list {
+      margin-top: 12px;
+    }
+    .notes-list-header {
+      font-size: 13px; font-weight: 600; color: #636e72;
+      margin-bottom: 6px; padding-bottom: 4px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .note-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .note-row:hover { background: #f5f5fa; }
+    .note-row a { color: #2d3436; text-decoration: none; }
+    .note-row a:hover { color: #667eea; }
+    .note-row-left {
+      flex: 1; min-width: 0;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .note-row-stats {
+      display: flex; gap: 8px; font-size: 11px; color: #999;
+      flex-shrink: 0; margin-left: 10px;
+    }
+    .official-tag {
+      display: inline-block;
+      font-size: 10px; background: #ff6b6b; color: white;
+      padding: 0px 5px; border-radius: 3px; font-weight: 500;
+      margin-left: 4px; vertical-align: middle;
+    }
+    .fan-tag {
+      display: inline-block;
+      font-size: 10px; background: #667eea; color: white;
+      padding: 0px 5px; border-radius: 3px; font-weight: 500;
+      margin-left: 4px; vertical-align: middle;
+    }
+
+    /* 官方/非官方统计 */
+    .source-bar {
+      display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 16px 0 12px;
+    }
+    .source-segment {
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 13px; font-weight: 600;
+    }
+    .source-legend { display: flex; gap: 24px; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #636e72; }
+    .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+    /* 热词 */
+    .hot-topics { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .topic-tag {
+      background: linear-gradient(135deg, #f093fb20, #f5576c20);
+      border: 1px solid #f093fb40; color: #be2edd;
+      padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 500;
+    }
+    .topic-tag.hot { background: linear-gradient(135deg, #ff6b6b20, #ee5a2420); border-color: #ff6b6b40; color: #ee5a24; }
+    .topic-tag.brand { background: linear-gradient(135deg, #667eea20, #764ba220); border-color: #667eea40; color: #4834d4; }
+
+    /* 分隔线 */
+    .note-divider {
+      height: 1px; background: #f0f0f0; margin: 2px 0;
+    }
+
+    /* 页脚 */
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      padding: 24px 0;
+      line-height: 1.8;
+    }
+
+    /* ===== 平板适配 (≤768px) ===== */
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+      .container { max-width: 100%; }
+      .header { padding: 24px 20px; border-radius: 12px; }
+      .header h1 { font-size: 22px; }
+      .header .subtitle { font-size: 13px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .stat-card { padding: 14px 10px; }
+      .stat-number { font-size: 26px; }
+      .stat-label { font-size: 12px; }
+      .section { padding: 20px 16px; border-radius: 12px; margin-bottom: 16px; }
+      .section-title { font-size: 17px; gap: 8px; flex-wrap: wrap; }
+      .section-title .icon { font-size: 20px; }
+      .section-title .badge { font-size: 11px; padding: 2px 8px; }
+      .overview-text { font-size: 13px; }
+
+      /* TOP10 适配 */
+      .top10-row { flex-wrap: wrap; gap: 8px; padding: 10px 8px; }
+      .top10-info { min-width: 0; flex: 1 1 calc(100% - 44px); }
+      .top10-title { white-space: normal; font-size: 13px; line-height: 1.4; }
+      .top10-author { font-size: 11px; }
+      .top10-heat {
+        width: 100%; margin-left: 36px;
+        flex-wrap: wrap; gap: 6px; font-size: 11px;
+      }
+      .top10-heat .fire { font-size: 12px; }
+
+      /* 笔记行适配 */
+      .note-row {
+        flex-direction: column; align-items: flex-start;
+        gap: 4px; padding: 8px;
+      }
+      .note-row-left {
+        white-space: normal; font-size: 13px; line-height: 1.5;
+      }
+      .note-row-stats { margin-left: 0; font-size: 11px; gap: 6px; }
+
+      /* 分析文本 */
+      .analysis-block { padding: 12px 14px; }
+      .analysis-text { font-size: 14px; }
+      .inline-quote { font-size: 12px; padding: 4px 0 4px 10px; line-height: 1.5; }
+      .inline-quote .quote-title { font-size: 11px; }
+      .notes-details summary { font-size: 12px; padding: 7px 12px; }
+
+      /* 来源分布条 */
+      .source-bar { height: 30px; }
+      .source-segment { font-size: 11px; }
+      .source-legend { gap: 12px; }
+      .legend-item { font-size: 12px; line-height: 1.5; }
+
+      /* 分类占比条 */
+      .category-label { width: 80px !important; font-size: 12px !important; }
+      .category-bar-row { gap: 6px !important; }
+
+      /* 热门话题 */
+      .hot-topics { gap: 8px; }
+      .topic-tag { font-size: 11px; padding: 4px 10px; }
+
+      /* 日程卡片 */
+      .schedule-card { padding: 14px 16px; }
+      .schedule-date { font-size: 13px; padding: 5px 12px; }
+      .schedule-name { font-size: 15px; }
+      .schedule-details { font-size: 12px; gap: 4px 10px; }
+
+      /* 页脚 */
+      .footer { font-size: 12px; padding: 16px 0; line-height: 1.7; }
+    }
+
+
+
+    /* ===== 手机适配 (≤480px) ===== */
+    @media (max-width: 480px) {
+      body { padding: 8px; }
+      .header { padding: 20px 16px; border-radius: 10px; }
+      .header h1 { font-size: 19px; letter-spacing: -0.5px; }
+      .header .subtitle { font-size: 12px; margin-bottom: 12px; }
+      .header .date-badge { font-size: 12px; padding: 5px 14px; }
+      .header div[style*="font-size:48px"] { font-size: 36px !important; margin-bottom: 8px !important; }
+
+      .stats-grid { gap: 8px; margin-bottom: 16px; }
+      .stat-card { padding: 12px 8px; border-radius: 10px; }
+      .stat-number { font-size: 22px; }
+      .stat-label { font-size: 11px; }
+
+      .section { padding: 16px 12px; border-radius: 10px; margin-bottom: 12px; }
+      .section-title { font-size: 15px; margin-bottom: 12px; padding-bottom: 8px; gap: 6px; }
+      .section-title .icon { font-size: 18px; }
+      .section-title .badge { font-size: 10px; padding: 1px 7px; }
+
+      /* 今日动态一览 */
+      .overview-item { gap: 8px; padding: 8px 0; }
+      .overview-num { width: 22px; height: 22px; font-size: 11px; }
+      .overview-text { font-size: 12.5px; line-height: 1.6; }
+
+      /* TOP10 */
+      .top10-row { padding: 8px 4px; gap: 6px; }
+      .top10-rank { width: 24px; height: 24px; font-size: 12px; }
+      .top10-info { flex: 1 1 calc(100% - 36px); }
+      .top10-title { font-size: 12.5px; }
+      .top10-title a { word-break: break-all; }
+      .top10-author { font-size: 10px; }
+      .top10-heat {
+        width: 100%; margin-left: 30px;
+        font-size: 10px; gap: 4px;
+      }
+      .top10-heat .fire { font-size: 11px; }
+      .top10-divider { margin: 0 4px; }
+
+      /* 笔记行 */
+      .note-row { padding: 6px 4px; gap: 3px; }
+      .note-row-left { font-size: 12px; line-height: 1.5; }
+      .note-row-left a { word-break: break-all; }
+      .note-row-stats { font-size: 10px; gap: 4px; flex-wrap: wrap; }
+      .notes-list-header { font-size: 12px; }
+      .note-time { font-size: 10px; margin-left: 4px; }
+      .official-tag, .fan-tag { font-size: 9px; padding: 0px 4px; }
+
+      /* 分析文本 */
+      .analysis-block { padding: 10px 12px; margin-bottom: 10px; }
+      .analysis-title { font-size: 13px; }
+      .analysis-text { font-size: 13px; line-height: 1.6; }
+      .analysis-text strong { font-size: 13px; margin-top: 6px; }
+      .inline-quote { font-size: 11.5px; padding: 3px 0 3px 8px; margin: 4px 0; }
+      .inline-quote a { font-size: 11px; }
+      .inline-quote .quote-title { font-size: 11px; }
+      .notes-details summary { font-size: 11px; padding: 6px 10px; }
+
+      /* 来源分布 */
+      .source-bar { height: 26px; border-radius: 6px; }
+      .source-segment { font-size: 10px; }
+      .source-legend { gap: 8px; flex-direction: column; }
+      .legend-item { font-size: 11px; align-items: flex-start; }
+      .legend-dot { width: 10px; height: 10px; flex-shrink: 0; margin-top: 3px; }
+
+      /* 分类占比内联样式覆盖 */
+      .category-bars { gap: 6px !important; }
+      .category-label { width: 72px !important; font-size: 11px !important; }
+      .category-bar-row { gap: 5px !important; }
+
+      /* 热门话题 */
+      .hot-topics { gap: 6px; }
+      .topic-tag { font-size: 10px; padding: 3px 8px; border-radius: 16px; }
+
+      /* 日程卡片 */
+      .schedule-card { padding: 12px 14px; margin-bottom: 10px; }
+      .schedule-card-header { gap: 8px; }
+      .schedule-date { font-size: 12px; padding: 4px 10px; }
+      .schedule-name { font-size: 14px; }
+      .schedule-tag { font-size: 10px; padding: 2px 8px; }
+      .schedule-details { font-size: 12px; gap: 4px 8px; }
+      .schedule-source { font-size: 11px; }
+      .schedule-change-section { padding: 10px 14px; }
+      .schedule-change-title { font-size: 13px; }
+      .schedule-change-item { font-size: 12px; }
+
+      /* 页脚 */
+      .footer { font-size: 11px; padding: 12px 0; line-height: 1.6; }
+      .footer p { margin-bottom: 2px; }
+    }
+
+    /* ===== 明星近期日程 ===== */
+    .schedule-card {
+      background: #fff;
+      border: 1px solid #f0f0f0;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .schedule-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .schedule-card-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 10px; flex-wrap: wrap;
+    }
+    .schedule-date {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white; padding: 6px 14px; border-radius: 8px;
+      font-size: 14px; font-weight: 700;
+      min-width: 80px; text-align: center;
+    }
+    .schedule-name {
+      font-size: 16px; font-weight: 700; color: #2d3436;
+      flex: 1; min-width: 0;
+    }
+    .schedule-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .schedule-tag {
+      font-size: 11px; padding: 3px 10px; border-radius: 12px;
+      font-weight: 600; white-space: nowrap;
+    }
+    .tag-weekend { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+    .tag-nearest { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+    .tag-free { background: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
+    .tag-ongoing { background: #fce4ec; color: #c62828; border: 1px solid #ef9a9a; }
+    .tag-tbd { background: #f3e5f5; color: #7b1fa2; border: 1px solid #ce93d8; }
+    .schedule-details {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 12px;
+      font-size: 13px; color: #555; line-height: 1.6;
+    }
+    .schedule-label { color: #999; font-weight: 500; white-space: nowrap; }
+    .schedule-value { color: #2d3436; }
+    .schedule-value a { color: #667eea; text-decoration: none; }
+    .schedule-value a:hover { text-decoration: underline; }
+    .schedule-source {
+      margin-top: 10px; padding-top: 8px;
+      border-top: 1px dashed #eee;
+      font-size: 12px; color: #aaa;
+    }
+    .schedule-source a { color: #667eea; text-decoration: none; }
+    .schedule-source a:hover { text-decoration: underline; }
+    .schedule-change-section {
+      margin-top: 16px; padding: 14px 18px;
+      background: linear-gradient(135deg, #fff8e1, #fff3e0);
+      border-radius: 10px;
+      border-left: 4px solid #ff9800;
+    }
+    .schedule-change-title {
+      font-size: 14px; font-weight: 700; color: #e65100;
+      margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+    }
+    .schedule-change-item {
+      font-size: 13px; color: #555; line-height: 1.6;
+      padding: 4px 0;
+    }
+    .schedule-change-item strong { color: #e65100; }
+
+    /* ===== 超小屏幕 (≤360px) ===== */
+    @media (max-width: 360px) {
+      body { padding: 6px; }
+      .header h1 { font-size: 17px; }
+      .stat-number { font-size: 20px; }
+      .section-title { font-size: 14px; }
+      .overview-text { font-size: 12px; }
+      .top10-heat { margin-left: 0; }
+      .note-row-left { font-size: 11.5px; }
+      .analysis-text { font-size: 12px; }
+      .inline-quote { font-size: 11px; }
+      .schedule-card { padding: 12px 14px; }
+      .schedule-date { font-size: 12px; padding: 4px 10px; }
+      .schedule-name { font-size: 14px; }
+      .schedule-details { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="header">
+      <div style="font-size:48px;margin-bottom:12px;">📋</div>
+      <h1>张凌赫 · 小红书动态日报</h1>
+      <p class="subtitle">基于小红书平台实时数据抓取分析</p>
+      <span class="date-badge">📅 2026年3月18日</span>
+    </div>
+
+    <!-- 今日动态一览 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">📌</span>
+        今日动态一览
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">1</div>
+        <div class="overview-text"><strong>《逐玉》剧集讨论全面爆发</strong>：第25-26集引爆全平台，"武安侯马甲掉落割手救妻""谢征以真实身份求婚""樊长玉替夫出征三锤定乾坤"三大名场面成为今日最热话题。官方发布的剧集片段单篇最高互动超7万，粉丝自制混剪和剧评大量产出。</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">2</div>
+        <div class="overview-text"><strong>张凌赫×田曦薇CP热度持续高涨</strong>："张凌赫怎么一合照就成为别人的男朋友"单篇获赞7.2万成为全天最热笔记，头纱照/婚照花絮引发大量讨论，粉丝强烈呼吁"二搭现代剧"。张凌赫的"男友感"人设标签破圈传播。</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">3</div>
+        <div class="overview-text"><strong>品牌商务活动密集</strong>：全棉时代（全国门店可领张凌赫海报）、百丽（代言一周年，深圳活动调至4月2日）、AGEE（联名产品到手）、ELLE（时尚大片持续曝光），四大品牌同步活跃。</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">4</div>
+        <div class="overview-text"><strong>新剧《归鸾》进入拍摄阶段</strong>：3月18日出/进妆花絮大量流出，"惊为天人"成为粉丝高频评价。多条出妆视频累计互动超4000，新作品期待值极高。</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">5</div>
+        <div class="overview-text"><strong>颜值安利与壁纸分享持续活跃</strong>：大量用户分享壁纸/头像/海报截图，"33张神颜暴击""逐玉高清壁纸"等安利帖密集发布，"颜霸""帅到没谁了"高频出现。</div>
+      </div>
+    </div>
+
+    <!-- 数据概览 -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">88</div>
+        <div class="stat-label">📝 当日笔记总数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">20.9w</div>
+        <div class="stat-label">❤️ 总点赞</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1.7w</div>
+        <div class="stat-label">⭐ 总收藏</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">25.3w</div>
+        <div class="stat-label">📊 总互动</div>
+      </div>
+    </div>
+
+    <!-- 🔥 TOP10 热门笔记榜单 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🔥</span>
+        今日 TOP10 热门笔记
+        <span class="badge">按点赞量排序</span>
+      </div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-1">1</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">张凌赫怎么一合照就成为别人的男朋友</a></div>
+          <div class="top10-author">@条条娱乐 · 3/18 15:13</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥🔥🔥🔥</span>
+          <span>❤️ 7.2w</span><span>💬 992</span><span>⭐ 3805</span><span>↗️ 5469</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-2">2</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">好逗。。爱逗。。。你俩咋回事。。</a></div>
+          <div class="top10-author">@酒酿熊子 · 3/18 17:16</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥🔥🔥</span>
+          <span>❤️ 1.9w</span><span>💬 522</span><span>⭐ 1574</span><span>↗️ 1235</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-3">3</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba780200000000230177f6" target="_blank">侯爷！侯爷！马甲掉了！！</a></div>
+          <div class="top10-author">@MAMORU | 张凌赫 · 3/18 18:01</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥🔥🔥</span>
+          <span>❤️ 1.6w</span><span>💬 350</span><span>⭐ 1206</span><span>↗️ 278</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">4</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6ac90000000021006e73" target="_blank">张凌赫澄清不在强制爱赛道，田曦薇微笑点头</a></div>
+          <div class="top10-author">@腾讯视频 · 3/18 17:05</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥🔥</span>
+          <span>❤️ 1.4w</span><span>💬 323</span><span>⭐ 1362</span><span>↗️ 883</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">5</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba3c65000000001a02002e" target="_blank">🥝逐玉｜樊长玉替夫出征，三锤定乾坤！</a></div>
+          <div class="top10-author">@爱奇艺 · 3/18 13:47</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥🔥</span>
+          <span>❤️ 1.0w</span><span>💬 1022</span><span>⭐ 630</span><span>↗️ 979</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">6</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba780e000000001e00f095" target="_blank">（视频）张凌赫田曦薇逐玉花絮</a></div>
+          <div class="top10-author">@芒果捞娱 · 3/18 18:01</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥🔥</span>
+          <span>❤️ 8076</span><span>💬 154</span><span>⭐ 932</span><span>↗️ 2387</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">7</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">所有人！感受！</a></div>
+          <div class="top10-author">@翠西爱草莓 · 3/18 23:10</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥</span>
+          <span>❤️ 6475</span><span>💬 216</span><span>⭐ 643</span><span>↗️ 766</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">8</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba8683000000002301da84" target="_blank">虽然但是 这一段冷脸好帅。。</a></div>
+          <div class="top10-author">@柠檬xuanxx · 3/18 19:03</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥</span>
+          <span>❤️ 6167</span><span>💬 267</span><span>⭐ 556</span><span>↗️ 146</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">9</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6a44000000002302290f" target="_blank">台下的观众就我一个</a></div>
+          <div class="top10-author">@惠. · 3/18 17:03</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥</span>
+          <span>❤️ 5531</span><span>💬 77</span><span>⭐ 370</span><span>↗️ 107</span>
+        </div>
+      </div>
+      <div class="top10-divider"></div>
+
+      <div class="top10-row">
+        <div class="top10-rank rank-other">10</div>
+        <div class="top10-info">
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba8ec7000000002300408e" target="_blank">❤️麻烦关下灯！我和张凌赫要睡觉了！！</a></div>
+          <div class="top10-author">@99二胎宝妈成长记 · 3/18 19:38</div>
+        </div>
+        <div class="top10-heat">
+          <span class="fire">🔥🔥</span>
+          <span>❤️ 4200</span><span>💬 303</span><span>⭐ 1170</span><span>↗️ 2742</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 官方/非官方分布 -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">📊</span>
+        信息来源分布
+      </div>
+      <div class="source-bar">
+        <div class="source-segment" style="width:18%; background: linear-gradient(135deg, #ff6b6b, #ee5a24);">官方 18%</div>
+        <div class="source-segment" style="width:82%; background: linear-gradient(135deg, #667eea, #764ba2);">非官方 82%</div>
+      </div>
+      <div class="source-legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#ff6b6b"></span>官方/机构账号（16条）：腾讯视频、爱奇艺、极光TV×2、东方娱乐×3、芒果捞娱、MAMORU粉丝站、百丽、全棉时代相关商场×3、郑州正弘汇、拜托了芝士</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#667eea"></span>非官方（72条）：粉丝、路人、娱乐博主、时尚博主、票务代理等</div>
+      </div>
+      <!-- 内容分类占比 -->
+      <div style="margin-top:22px;">
+        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:10px;">📂 内容分类分布</div>
+        <div class="category-bars" style="display:flex;flex-direction:column;gap:8px;">
+          <!-- 剧集讨论 35篇 -->
+          <div class="category-bar-row" style="display:flex;align-items:center;gap:8px;">
+            <div class="category-label" style="width:110px;font-size:13px;color:#636e72;flex-shrink:0;">📺 剧集讨论</div>
+            <div style="flex:1;height:24px;background:#f5f5f5;border-radius:4px;overflow:hidden;position:relative;">
+              <div style="width:40%;height:100%;background:linear-gradient(135deg,#ff6b6b,#ee5a24);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;min-width:40px;">
+                <span style="font-size:11px;color:white;font-weight:600;">35篇</span>
+              </div>
+            </div>
+            <div style="width:40px;font-size:13px;color:#2d3436;font-weight:600;text-align:right;">40%</div>
+          </div>
+          <!-- 颜值安利 18篇 -->
+          <div class="category-bar-row" style="display:flex;align-items:center;gap:8px;">
+            <div class="category-label" style="width:110px;font-size:13px;color:#636e72;flex-shrink:0;">🌟 颜值安利</div>
+            <div style="flex:1;height:24px;background:#f5f5f5;border-radius:4px;overflow:hidden;position:relative;">
+              <div style="width:20%;height:100%;background:linear-gradient(135deg,#f093fb,#f5576c);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;min-width:40px;">
+                <span style="font-size:11px;color:white;font-weight:600;">18篇</span>
+              </div>
+            </div>
+            <div style="width:40px;font-size:13px;color:#2d3436;font-weight:600;text-align:right;">20%</div>
+          </div>
+          <!-- 品牌代言 12篇 -->
+          <div class="category-bar-row" style="display:flex;align-items:center;gap:8px;">
+            <div class="category-label" style="width:110px;font-size:13px;color:#636e72;flex-shrink:0;">🏷️ 品牌代言</div>
+            <div style="flex:1;height:24px;background:#f5f5f5;border-radius:4px;overflow:hidden;position:relative;">
+              <div style="width:14%;height:100%;background:linear-gradient(135deg,#f0932b,#f39c12);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;min-width:40px;">
+                <span style="font-size:11px;color:white;font-weight:600;">12篇</span>
+              </div>
+            </div>
+            <div style="width:40px;font-size:13px;color:#2d3436;font-weight:600;text-align:right;">14%</div>
+          </div>
+          <!-- CP向&娱乐讨论 10篇 -->
+          <div class="category-bar-row" style="display:flex;align-items:center;gap:8px;">
+            <div class="category-label" style="width:110px;font-size:13px;color:#636e72;flex-shrink:0;">💕 CP&娱乐</div>
+            <div style="flex:1;height:24px;background:#f5f5f5;border-radius:4px;overflow:hidden;position:relative;">
+              <div style="width:11%;height:100%;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;min-width:40px;">
+                <span style="font-size:11px;color:white;font-weight:600;">10篇</span>
+              </div>
+            </div>
+            <div style="width:40px;font-size:13px;color:#2d3436;font-weight:600;text-align:right;">11%</div>
+          </div>
+          <!-- 归鸾新剧 8篇 -->
+          <div class="category-bar-row" style="display:flex;align-items:center;gap:8px;">
+            <div class="category-label" style="width:110px;font-size:13px;color:#636e72;flex-shrink:0;">🎬 归鸾新剧</div>
+            <div style="flex:1;height:24px;background:#f5f5f5;border-radius:4px;overflow:hidden;position:relative;">
+              <div style="width:9%;height:100%;background:linear-gradient(135deg,#6ab04c,#27ae60);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;min-width:40px;">
+                <span style="font-size:11px;color:white;font-weight:600;">8篇</span>
+              </div>
+            </div>
+            <div style="width:40px;font-size:13px;color:#2d3436;font-weight:600;text-align:right;">9%</div>
+          </div>
+          <!-- 其他 5篇 -->
+          <div class="category-bar-row" style="display:flex;align-items:center;gap:8px;">
+            <div class="category-label" style="width:110px;font-size:13px;color:#636e72;flex-shrink:0;">📎 其他</div>
+            <div style="flex:1;height:24px;background:#f5f5f5;border-radius:4px;overflow:hidden;position:relative;">
+              <div style="width:6%;height:100%;background:linear-gradient(135deg,#95afc0,#636e72);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;min-width:40px;">
+                <span style="font-size:11px;color:white;font-weight:600;">5篇</span>
+              </div>
+            </div>
+            <div style="width:40px;font-size:13px;color:#2d3436;font-weight:600;text-align:right;">6%</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:#999;margin-top:6px;">* 部分笔记可能同时涉及多个分类，按主要内容归类统计</div>
+      </div>
+
+      <div style="margin-top:20px;">
+        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:10px;">🔥 今日热门话题</div>
+        <div class="hot-topics">
+          <span class="topic-tag hot">#逐玉 马甲掉落</span>
+          <span class="topic-tag hot">#征玉 追妻火葬场</span>
+          <span class="topic-tag hot">#樊长玉替夫出征</span>
+          <span class="topic-tag">#张凌赫田曦薇 CP</span>
+          <span class="topic-tag">#张凌赫 合照男朋友</span>
+          <span class="topic-tag brand">#全棉时代 海报领取</span>
+          <span class="topic-tag brand">#百丽 一周年</span>
+          <span class="topic-tag brand">#AGEE 联名</span>
+          <span class="topic-tag">#归鸾 出妆花絮</span>
+          <span class="topic-tag">#张凌赫壁纸 神颜</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 分类一：剧集讨论 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">📺</span>
+        分类一：剧集讨论（《逐玉》）
+        <span class="badge">占比最高 · 35篇</span>
+      </div>
+
+      <div class="analysis-block">
+        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-text">
+          <strong>🔹 核心讨论点</strong>
+          《逐玉》第25-26集是今日绝对焦点。三大名场面——"武安侯马甲掉落割手救妻""谢征以真实身份向樊长玉求婚""樊长玉替夫出征三锤定乾坤"——引爆全平台讨论。张凌赫形容该剧高光为"震撼美味"，成为今日出圈金句。
+          <div class="inline-quote">"台下的观众就我一个"（5531赞）—— @惠. · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6a44000000002302290f" target="_blank">《台下的观众就我一个》</a></div>
+          <div class="inline-quote">"武安侯追妻吧你就"（3399赞）—— @宥桉 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6af10000000023004b56" target="_blank">《武安侯追妻吧你就》</a></div>
+
+          <strong>🔹 观众情绪</strong>
+          粉丝对剧情进展高度投入，正面评价占绝对主导。"追妻火葬场""男友力""冷脸好帅""变脸好丝滑"成为热门评语。张凌赫的演技获一致好评，"虽然但是 这一段冷脸好帅"获6167赞。烟花圆房吻被封为"古偶名场面"。
+          <div class="inline-quote">"虽然但是 这一段冷脸好帅。。"（6167赞）—— @柠檬xuanxx · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba8683000000002301da84" target="_blank">《虽然但是 这一段冷脸好帅。。》</a></div>
+          <div class="inline-quote">"所有人！感受！"（6475赞）—— @翠西爱草莓 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">《所有人！感受！》</a></div>
+          <div class="inline-quote">"张凌赫形容长玉的那一巴掌《震撼美味》"（1357赞）—— @草莓牛奶味的Haru · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba735b000000001a020489" target="_blank">《张凌赫形容长玉的那一巴掌《震撼美味》》</a></div>
+
+          <strong>🔹 传播特征</strong>
+          官方账号（腾讯视频×2、爱奇艺×1、极光TV×2、东方娱乐×3）发布的剧情片段、采访花絮单篇互动量破千，是流量主要来源。娱乐博主二创传播力度极强，粉丝混剪和图文剧评大量产出。视频类笔记占比超70%。
+        </div>
+      </div>
+
+      <details class="notes-details">
+        <summary>📎 点击展开所有相关笔记</summary>
+      <div class="notes-list">
+        <div class="notes-list-header">🏢 官方发布（8篇）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6ac90000000021006e73" target="_blank">张凌赫澄清不在强制爱赛道，田曦薇微笑点头</a><span class="official-tag">腾讯视频</span><span class="note-time">3/18 17:05</span></div>
+          <div class="note-row-stats"><span>❤️ 1.4w</span><span>⭐ 1362</span><span>💬 323</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba3c65000000001a02002e" target="_blank">🥝逐玉｜樊长玉替夫出征，三锤定乾坤！</a><span class="official-tag">爱奇艺</span><span class="note-time">3/18 13:47</span></div>
+          <div class="note-row-stats"><span>❤️ 1.0w</span><span>⭐ 630</span><span>💬 1022</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba166e0000000022026e78" target="_blank">谢征掉马掳走长玉，征玉开启追妻强制爱模式</a><span class="official-tag">腾讯视频</span><span class="note-time">3/18 11:05</span></div>
+          <div class="note-row-stats"><span>❤️ 3254</span><span>⭐ 240</span><span>💬 118</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6a790000000023027dfd" target="_blank">征玉强制爱名场面，张凌赫：震撼美味！</a><span class="official-tag">极光TV</span><span class="note-time">3/18 17:03</span></div>
+          <div class="note-row-stats"><span>❤️ 1644</span><span>⭐ 135</span><span>💬 70</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6a730000000023027dd4" target="_blank">强制爱赛道最严厉的父亲？张凌赫在线辟谣</a><span class="official-tag">极光TV</span><span class="note-time">3/18 17:03</span></div>
+          <div class="note-row-stats"><span>❤️ 1108</span><span>⭐ 134</span><span>💬 49</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba57c3000000001f001372" target="_blank">田曦薇介绍谢征 把张凌赫说感动了</a><span class="official-tag">东方娱乐</span><span class="note-time">3/18 15:44</span></div>
+          <div class="note-row-stats"><span>❤️ 989</span><span>⭐ 102</span><span>💬 72</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba5894000000001e00ccf6" target="_blank">谢征开局就重伤？张凌赫：伤得好！</a><span class="official-tag">东方娱乐</span><span class="note-time">3/18 15:47</span></div>
+          <div class="note-row-stats"><span>❤️ 293</span><span>⭐ 27</span><span>💬 25</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba88c5000000001b0233a5" target="_blank">理工学霸勇闯娱乐圈 张凌赫：胖子都是潜力股</a><span class="official-tag">东方娱乐</span><span class="note-time">3/18 19:13</span></div>
+          <div class="note-row-stats"><span>❤️ 149</span><span>⭐ 19</span><span>💬 5</span></div>
+        </div>
+
+        <div class="notes-list-header" style="margin-top:10px;">👥 粉丝/博主热门讨论（27篇 · TOP15展示）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba780e000000001e00f095" target="_blank">(视频) 张凌赫田曦薇逐玉花絮</a> · @芒果捞娱<span class="note-time">3/18 18:01</span></div>
+          <div class="note-row-stats"><span>❤️ 8076</span><span>⭐ 932</span><span>💬 154</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">所有人！感受！</a> · @翠西爱草莓<span class="note-time">3/18 23:10</span></div>
+          <div class="note-row-stats"><span>❤️ 6475</span><span>⭐ 643</span><span>💬 216</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba8683000000002301da84" target="_blank">虽然但是 这一段冷脸好帅。。</a> · @柠檬xuanxx<span class="note-time">3/18 19:03</span></div>
+          <div class="note-row-stats"><span>❤️ 6167</span><span>⭐ 556</span><span>💬 267</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6a44000000002302290f" target="_blank">台下的观众就我一个</a> · @惠.<span class="note-time">3/18 17:03</span></div>
+          <div class="note-row-stats"><span>❤️ 5531</span><span>⭐ 370</span><span>💬 77</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba8ec7000000002300408e" target="_blank">❤️麻烦关下灯！我和张凌赫要睡觉了！！</a> · @99二胎宝妈成长记<span class="note-time">3/18 19:38</span></div>
+          <div class="note-row-stats"><span>❤️ 4200</span><span>⭐ 1170</span><span>💬 303</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba8582000000001b0012c3" target="_blank">加更！逐玉小人蹦蹦哒哒</a> · @鱼饼炸年糕cici<span class="note-time">3/18 18:59</span></div>
+          <div class="note-row-stats"><span>❤️ 3564</span><span>⭐ 585</span><span>💬 71</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6af10000000023004b56" target="_blank">武安侯追妻吧你就</a> · @宥桉<span class="note-time">3/18 17:05</span></div>
+          <div class="note-row-stats"><span>❤️ 3399</span><span>⭐ 370</span><span>💬 163</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9d48000000001a028829" target="_blank">0h 你就用这个直勾勾的眼神逗她吧🤪</a> · @霸王绿姬<span class="note-time">3/18 20:40</span></div>
+          <div class="note-row-stats"><span>❤️ 2987</span><span>⭐ 244</span><span>💬 62</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69bac05a000000002301eca5" target="_blank">(视频) 逐玉讨论</a> · @小小影视圈<span class="note-time">3/18 23:10</span></div>
+          <div class="note-row-stats"><span>❤️ 2750</span><span>⭐ 433</span><span>💬 205</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9894000000001f005a4a" target="_blank">张凌赫｜哇！我听到了什么！（震惊！）</a> · @叉叉点查查<span class="note-time">3/18 20:20</span></div>
+          <div class="note-row-stats"><span>❤️ 2543</span><span>⭐ 247</span><span>💬 51</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba87ff0000000021012166" target="_blank">盘点2026年那些自带BGM的男人！</a> · @青春影焦圈<span class="note-time">3/18 19:09</span></div>
+          <div class="note-row-stats"><span>❤️ 2512</span><span>⭐ 363</span><span>💬 71</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba67f9000000001a023a65" target="_blank">痛失所爱</a> · @万事bingo<span class="note-time">3/18 16:53</span></div>
+          <div class="note-row-stats"><span>❤️ 2019</span><span>⭐ 244</span><span>💬 60</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4188000000001b021178" target="_blank">看背是几个意思啊，是回味上了吗谢征奶奶</a> · @噗呲卡次<span class="note-time">3/18 14:09</span></div>
+          <div class="note-row-stats"><span>❤️ 1707</span><span>⭐ 101</span><span>💬 58</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba85280000000023026221" target="_blank">长玉替夫出征，谢征身份暴露</a> · @无风<span class="note-time">3/18 18:57</span></div>
+          <div class="note-row-stats"><span>❤️ 1552</span><span>⭐ 215</span><span>💬 13</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba735b000000001a020489" target="_blank">张凌赫形容长玉的那一巴掌《震撼美味》</a> · @草莓牛奶味的Haru<span class="note-time">3/18 17:41</span></div>
+          <div class="note-row-stats"><span>❤️ 1357</span><span>⭐ 99</span><span>💬 51</span></div>
+        </div>
+        <div style="font-size:12px;color:#999;padding:6px 8px;margin-top:4px;">
+          还有12篇：@baada9的张凌赫在干嘛(1178赞)、@花星观察日记(938赞)、@YY爱看剧·烟花圆房吻(846赞)、@青春娱乐(738赞)、@今天笑了(574赞)、@卧槽全体起立(570赞)、@永和豆浆(14赞)、@跳跳糖(31赞)、@薯条(10赞)等
+        </div>
+      </div>
+      </details>
+    </div>
+
+    <!-- ============ 分类二：CP向 & 娱乐讨论 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">💕</span>
+        分类二：CP向 & 娱乐讨论
+        <span class="badge">10篇</span>
+      </div>
+
+      <div class="analysis-block">
+        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-text">
+          <strong>🔹 CP向讨论</strong>
+          张凌赫×田曦薇的CP热度达到全天最高——"张凌赫怎么一合照就成为别人的男朋友"以7.2万赞成为今日全平台最热笔记。头纱照、婚照花絮被反复传播，"必须给我二搭三搭四搭"呼声密集。
+          <div class="inline-quote">"张凌赫怎么一合照就成为别人的男朋友"（72004赞）—— @条条娱乐 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">《张凌赫怎么一合照就成为别人的男朋友》</a></div>
+          <div class="inline-quote">"好逗。。爱逗。。。你俩咋回事。。"（19069赞）—— @酒酿熊子 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">《好逗。。爱逗。。。你俩咋回事。。》</a></div>
+
+          <strong>🔹 破圈传播</strong>
+          "合照男朋友"话题突破粉丝圈层，大量路人参与讨论。张凌赫"异性缘好/男友感强"已成为破圈传播的重要人设标签。张凌赫的"对待感情很专一"也在八卦圈被讨论。
+          <div class="inline-quote">"我拍的张凌赫田曦薇和曾导"（698赞）—— @翅膀的李 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6fff0000000021039b0a" target="_blank">《我拍的张凌赫田曦薇和曾导》</a></div>
+
+          <strong>🔹 综艺向</strong>
+          张凌赫×田曦薇采访花絮大量传播，两人的互动片段被粉丝反复截取和二创。
+        </div>
+      </div>
+
+      <details class="notes-details">
+        <summary>📎 点击展开所有相关笔记</summary>
+      <div class="notes-list">
+        <div class="notes-list-header">🔥 高互动热门（5篇）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">张凌赫怎么一合照就成为别人的男朋友</a><span class="fan-tag">娱乐博主</span><span class="note-time">3/18 15:13</span></div>
+          <div class="note-row-stats"><span>❤️ 7.2w</span><span>⭐ 3805</span><span>💬 992</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">好逗。。爱逗。。。你俩咋回事。。</a> · @酒酿熊子<span class="note-time">3/18 17:16</span></div>
+          <div class="note-row-stats"><span>❤️ 1.9w</span><span>⭐ 1574</span><span>💬 522</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baa630000000001a032a5a" target="_blank">我家漂亮哥哥又请喝奶茶了</a> · @万事bingo<span class="note-time">3/18 21:18</span></div>
+          <div class="note-row-stats"><span>❤️ 2802</span><span>⭐ 196</span><span>💬 124</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baada9000000001b003e66" target="_blank">张凌赫你在干嘛？！</a> · @momo<span class="note-time">3/18 21:50</span></div>
+          <div class="note-row-stats"><span>❤️ 1178</span><span>⭐ 108</span><span>💬 236</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba6fff0000000021039b0a" target="_blank">我拍的张凌赫田曦薇和曾导</a> · @翅膀的李<span class="note-time">3/18 17:27</span></div>
+          <div class="note-row-stats"><span>❤️ 698</span><span>⭐ 42</span><span>💬 48</span></div>
+        </div>
+
+        <div class="notes-list-header" style="margin-top:10px;">👥 其他讨论（5篇）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baaaa800000000230048f3" target="_blank">vv就这样逗oh😍</a> · @霜降.<span class="note-time">3/18 21:37</span></div>
+          <div class="note-row-stats"><span>❤️ 214</span><span>⭐ 31</span><span>💬 19</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba75e500000000220018f3" target="_blank">和张凌赫同学的自拍🤳</a> · @留下小秘密<span class="note-time">3/18 17:52</span></div>
+          <div class="note-row-stats"><span>❤️ 100</span><span>⭐ 7</span><span>💬 3</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba619300000000230247d6" target="_blank">曝张凌赫对待感情很专一，只和白鹿谈过</a> · @娱乐樂翻天<span class="note-time">3/18 16:25</span></div>
+          <div class="note-row-stats"><span>❤️ 14</span><span>⭐ 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baa998000000001d01e85c" target="_blank">为什么像张凌赫这样的人，反而更容易焦虑？</a> · @LI老师有话说<span class="note-time">3/18 21:33</span></div>
+          <div class="note-row-stats"><span>❤️ 13</span><span>⭐ 4</span><span>💬 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba5718000000002200e4d6" target="_blank">田作之赫同人文。</a> · @泡泡<span class="note-time">3/18 15:41</span></div>
+          <div class="note-row-stats"><span>❤️ 3</span><span>⭐ 1</span></div>
+        </div>
+      </div>
+      </details>
+    </div>
+
+    <!-- ============ 分类三：颜值安利 & 壁纸分享 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🌟</span>
+        分类三：颜值安利 & 壁纸分享
+        <span class="badge">18篇</span>
+      </div>
+
+      <div class="analysis-block">
+        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-text">
+          <strong>🔹 核心内容</strong>
+          以张凌赫的帅照、壁纸、头像分享为主。粉丝大量搬运和二创其在《逐玉》中的古装造型截图，以及代言品牌时尚大片。"33张神颜暴击""逐玉壁纸大合集"等安利帖传播力度强。
+          <div class="inline-quote">"33张张凌赫神颜暴击｜每张都想存成壁纸🔥"（113赞）—— @努力减肥变得更漂亮 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba791f000000001a034203" target="_blank">《33张张凌赫神颜暴击》</a></div>
+          <div class="inline-quote">"张凌赫这十张壁纸谁还没有啊啊啊啊啊好帅"（8赞）—— @寻知 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69bab4b9000000002800a713" target="_blank">《张凌赫这十张壁纸谁还没有》</a></div>
+
+          <strong>🔹 观点特征</strong>
+          用户情绪高度正面，"颜霸""帅到没谁了""神颜""权威的一张脸""惊为天人"等夸赞性表达密集。此类内容单篇互动虽不及剧集讨论，但数量多、发布频率高，体现粉丝群体的日常活跃度极高。
+          <div class="inline-quote">"卧卧卧，张凌赫！逐玉！好权威的一张脸！"（16赞）—— @白白 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba9352000000002100601a" target="_blank">《卧卧卧，张凌赫！逐玉！好权威的一张脸！》</a></div>
+          <div class="inline-quote">"真的有人长这么帅啊！张凌赫的颜太权威啦！"（16赞）—— @一念 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69baaa1d000000001d01a64b" target="_blank">《真的有人长这么帅啊！》</a></div>
+
+          <strong>🔹 数据规律</strong>
+          壁纸类笔记以图文为主，发布时间集中在下午至晚间。带有"收藏""壁纸""头像"关键词的笔记收藏率明显高于平均水平。
+        </div>
+      </div>
+
+      <details class="notes-details">
+        <summary>📎 点击展开所有相关笔记</summary>
+      <div class="notes-list">
+        <div class="notes-list-header">🔥 热门安利（18篇 · TOP15展示）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4ed3000000001a02621c" target="_blank">张凌赫✨随性牛仔卫衣帅得很有腔调</a> · @时髦精扒同款<span class="note-time">3/18 15:05</span></div>
+          <div class="note-row-stats"><span>❤️ 248</span><span>⭐ 38</span><span>💬 15</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba5024000000001a0269fb" target="_blank">哥哥冲击力的帅😻</a> · @起司章鱼_<span class="note-time">3/18 15:11</span></div>
+          <div class="note-row-stats"><span>❤️ 187</span><span>⭐ 22</span><span>💬 3</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba273600000000200380e1" target="_blank">(资讯图文) 张凌赫相关</a> · @拜托了芝士<span class="note-time">3/18 12:16</span></div>
+          <div class="note-row-stats"><span>❤️ 161</span><span>⭐ 47</span><span>💬 9</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba5dd40000000021011c06" target="_blank">张凌赫，解锁个人五大首封</a> · @Fashion王熙凤<span class="note-time">3/18 16:09</span></div>
+          <div class="note-row-stats"><span>❤️ 140</span><span>⭐ 13</span><span>💬 4</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69bab045000000001a026e9b" target="_blank">这个表情转换</a> · @絮<span class="note-time">3/18 22:01</span></div>
+          <div class="note-row-stats"><span>❤️ 129</span><span>⭐ 5</span><span>💬 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba791f000000001a034203" target="_blank">33张张凌赫神颜暴击｜每张都想存成壁纸🔥</a> · @努力减肥变得更漂亮<span class="note-time">3/18 18:06</span></div>
+          <div class="note-row-stats"><span>❤️ 113</span><span>⭐ 30</span><span>💬 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba78d0000000001a022805" target="_blank">张凌赫横扫三平台破万大爆🔥三品牌推封女刊</a> · @Ruby张丹的全新世界<span class="note-time">3/18 18:05</span></div>
+          <div class="note-row-stats"><span>❤️ 233</span><span>⭐ 20</span><span>💬 30</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba8f1400000000210047af" target="_blank">好看 敲好看！</a> · @赫赫有名冰淇凌<span class="note-time">3/18 19:40</span></div>
+          <div class="note-row-stats"><span>❤️ 38</span><span>⭐ 3</span><span>💬 18</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba53ec000000001a02d183" target="_blank">被张凌赫帅成这样正常吗？</a> · @hello<span class="note-time">3/18 15:27</span></div>
+          <div class="note-row-stats"><span>❤️ 17</span><span>💬 9</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9352000000002100601a" target="_blank">卧卧卧，张凌赫！逐玉！好权威的一张脸！</a> · @白白<span class="note-time">3/18 19:58</span></div>
+          <div class="note-row-stats"><span>❤️ 16</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baaa1d000000001d01a64b" target="_blank">真的有人长这么帅啊！张凌赫的颜太权威啦！</a> · @一念<span class="note-time">3/18 21:35</span></div>
+          <div class="note-row-stats"><span>❤️ 16</span><span>⭐ 3</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba7da7000000002200cf5c" target="_blank">谁还没存！《逐玉》男女主绝美壁纸大合集</a> · @妖妖灵<span class="note-time">3/18 18:25</span></div>
+          <div class="note-row-stats"><span>❤️ 15</span><span>⭐ 5</span><span>💬 3</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9f8c000000002300522a" target="_blank">破碎感 武安侯｜谢征高清壁纸 自修</a> · @夏耶耶<span class="note-time">3/18 20:50</span></div>
+          <div class="note-row-stats"><span>❤️ 18</span><span>⭐ 3</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9d640000000021005bae" target="_blank">张凌赫｜壁纸🍃</a> · @Komorebiyeo<span class="note-time">3/18 20:41</span></div>
+          <div class="note-row-stats"><span>❤️ 22</span><span>⭐ 13</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba35e8000000001d018498" target="_blank">LINGHE ZHANG | 张凌赫🦊壁纸.</a> · @^jeongcoups.<span class="note-time">3/18 13:19</span></div>
+          <div class="note-row-stats"><span>❤️ 9</span><span>⭐ 3</span></div>
+        </div>
+        <div style="font-size:12px;color:#999;padding:6px 8px;margin-top:4px;">
+          还有3篇：@张凌赫这十张壁纸(8赞)、@怎么会有这么帅的(7赞)、@逐玉神级壁纸(11赞)等
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 分类四：品牌代言 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🏷️</span>
+        分类四：品牌代言
+        <span class="badge">12篇</span>
+      </div>
+
+      <div class="analysis-block">
+        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-text">
+          <strong>🔹 核心内容</strong>
+          今日品牌代言内容涵盖四大品牌：全棉时代（全国多个城市门店可免费领取张凌赫海报，武汉白沙天街、中山富逸城、北京大融城等均有打卡）、百丽BELLE（代言一周年，深圳活动调至4月2日壹方城）、AGEE（联名产品到手晒单）、ELLE（时尚大片持续曝光）。
+          <div class="inline-quote">"谁还不知道全棉时代可以领张凌赫海报！"（87赞）—— @龙湖武汉白沙天街 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba60ad000000001b0034df" target="_blank">《谁还不知道全棉时代可以领张凌赫海报！》</a></div>
+          <div class="inline-quote">"全棉时代背后一定有高手指点！！全新代言人！！"（351赞）—— @郑州正弘汇 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba626400000000210384d6" target="_blank">《全棉时代背后一定有高手指点！！》</a></div>
+
+          <strong>🔹 粉丝购买力</strong>
+          粉丝对代言产品表现出较高购买意愿，"到手""下单了""冲""领回家"等关键词频繁出现。商场官方账号主动参与发布，说明品牌方对张凌赫粉丝经济效应的认可度高。
+          <div class="inline-quote">"谁懂啊！为了张凌赫周边我要冲全棉时代了💚"（25赞）—— @北京中关村ART PARK大融城 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69baa0f300000000220018f8" target="_blank">《谁懂啊！为了张凌赫周边我要冲全棉时代了💚》</a></div>
+
+          <strong>🔹 品牌矩阵</strong>
+          可监测到的活跃代言/合作品牌：全棉时代（家居服）、百丽BELLE（鞋类）、AGEE（眼镜）、ELLE（时尚杂志）。四大品牌同日活跃，商务活动密集，说明张凌赫的商业价值正处于高速释放期。
+        </div>
+      </div>
+
+      <details class="notes-details">
+        <summary>📎 点击展开所有相关笔记</summary>
+      <div class="notes-list">
+        <div class="notes-list-header">🏢 品牌/商场官方（4篇）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba626400000000210384d6" target="_blank">全棉时代背后一定有高手指点！！全新代言人！！</a><span class="official-tag">郑州正弘汇</span><span class="note-time">3/18 16:29</span></div>
+          <div class="note-row-stats"><span>❤️ 351</span><span>⭐ 132</span><span>💬 202</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba60ad000000001b0034df" target="_blank">谁还不知道全棉时代可以领张凌赫海报！</a><span class="official-tag">龙湖武汉白沙天街</span><span class="note-time">3/18 16:22</span></div>
+          <div class="note-row-stats"><span>❤️ 87</span><span>⭐ 54</span><span>💬 54</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baa0f300000000220018f8" target="_blank">谁懂啊！为了张凌赫周边我要冲全棉时代了💚</a><span class="official-tag">北京大融城</span><span class="note-time">3/18 20:56</span></div>
+          <div class="note-row-stats"><span>❤️ 25</span><span>⭐ 16</span><span>💬 19</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba77c8000000001d01c793" target="_blank">🔥张凌赫&田曦薇《逐玉》收藏卡正式上线</a> · @小芒果拆卡<span class="note-time">3/18 18:00</span></div>
+          <div class="note-row-stats"><span>❤️ 7</span><span>⭐ 2</span><span>💬 1</span></div>
+        </div>
+
+        <div class="notes-list-header" style="margin-top:10px;">👥 粉丝讨论（8篇）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69babcc6000000002103a1e4" target="_blank">霸王茶姬逐玉 张凌赫杯贴（无偿！</a> · @Nn<span class="note-time">3/18 22:55</span></div>
+          <div class="note-row-stats"><span>❤️ 14</span><span>💬 96</span><span>↗️ 5</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba421a0000000022029984" target="_blank">我看谁不来全棉时代领张凌赫回家</a> · @小八日记<span class="note-time">3/18 14:11</span></div>
+          <div class="note-row-stats"><span>❤️ 12</span><span>💬 8</span><span>↗️ 12</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba8821000000002301e24c" target="_blank">中山！富逸城！张凌赫全棉时代！</a> · @酸奶琳琳琳<span class="note-time">3/18 19:10</span></div>
+          <div class="note-row-stats"><span>❤️ 5</span><span>💬 8</span><span>↗️ 8</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba58ab0000000022028500" target="_blank">4.16开始推理吧发布会</a> · @笔岛<span class="note-time">3/18 15:47</span></div>
+          <div class="note-row-stats"><span>❤️ 5</span><span>⭐ 1</span><span>💬 4</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baaa80000000002800b5ed" target="_blank">全棉时代家夫海报已到手</a> · @yyy1月-<span class="note-time">3/18 21:37</span></div>
+          <div class="note-row-stats"><span>❤️ 4</span><span>💬 4</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba64c9000000002200f5e1" target="_blank">(视频) 品牌相关</a> · @螃蟹大王<span class="note-time">3/18 16:39</span></div>
+          <div class="note-row-stats"><span>❤️ 20</span><span>⭐ 6</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba890f000000001f000c79" target="_blank">(图文) 张凌赫相关</a> · @张凌赫<span class="note-time">3/18 19:14</span></div>
+          <div class="note-row-stats"><span>❤️ 8</span><span>⭐ 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba5361000000001f007e45" target="_blank">非官方！！小核桃不要被骗💰！！</a> · @歪歪0h<span class="note-time">3/18 15:25</span></div>
+          <div class="note-row-stats"><span>💬 2</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 分类五：归鸾新剧动态 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🎬</span>
+        分类五：《归鸾》新剧动态
+        <span class="badge">8篇</span>
+      </div>
+
+      <div class="analysis-block">
+        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-text">
+          <strong>🔹 核心内容</strong>
+          张凌赫新剧《归鸾》3月18日已进入拍摄阶段，当日大量出/进妆花絮流出。粉丝在片场周边拍摄到张凌赫的妆造，"惊为天人""帅得不像话"成为高频评价。
+          <div class="inline-quote">"260318归鸾进妆～"（3009赞）—— @Ning的_莓莓星冰乐🍓 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba35c3000000001a02ca77" target="_blank">《260318归鸾进妆～》</a></div>
+          <div class="inline-quote">"3.18出妆，惊为天人"（10赞）—— @小菇凉 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba648c000000001a02e3c0" target="_blank">《3.18出妆，惊为天人》</a></div>
+
+          <strong>🔹 粉丝期待</strong>
+          粉丝对《归鸾》期待值极高，出妆视频和图片被快速传播。多个粉丝在不同地点拍摄到花絮，"一年之后终于再见🥹"等表达体现出等待已久的激动。
+          <div class="inline-quote">"318出妆｜一年之后终于再见🥹"（135赞）—— @匿名上网 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba4fef000000002301c8b9" target="_blank">《318出妆｜一年之后终于再见🥹》</a></div>
+          <div class="inline-quote">"3.18张凌赫今天穿的有点帅呀"（12赞）—— @momo小核桃💕 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba4d9c000000001a02f348" target="_blank">《3.18张凌赫今天穿的有点帅呀》</a></div>
+        </div>
+      </div>
+
+      <details class="notes-details">
+        <summary>📎 点击展开所有相关笔记</summary>
+      <div class="notes-list">
+        <div class="notes-list-header">📸 出妆/进妆花絮（8篇）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba35c3000000001a02ca77" target="_blank">260318归鸾进妆～</a> · @Ning的_莓莓星冰乐🍓<span class="note-time">3/18 13:18</span></div>
+          <div class="note-row-stats"><span>❤️ 3009</span><span>⭐ 245</span><span>💬 76</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba357f00000000230178e2" target="_blank">卧槽卧槽全体起立！我不允许你们不看张凌赫！</a> · @圈一个圈<span class="note-time">3/18 13:17</span></div>
+          <div class="note-row-stats"><span>❤️ 570</span><span>⭐ 209</span><span>💬 28</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4bee000000002302498e" target="_blank">𝟮𝟬𝟮𝟲𝟬𝟯𝟭𝟴｜归鸾出妆</a> · @小李会幸福<span class="note-time">3/18 14:53</span></div>
+          <div class="note-row-stats"><span>❤️ 353</span><span>⭐ 40</span><span>💬 12</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4ca200000000220257c1" target="_blank">260318 家玮出妆</a> · @🐰小兔啵啵<span class="note-time">3/18 14:56</span></div>
+          <div class="note-row-stats"><span>❤️ 254</span><span>⭐ 20</span><span>💬 5</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba5053000000001a022e59" target="_blank">3.18｜出妆 帅哥驾到</a> · @Zero咖啡_<span class="note-time">3/18 15:12</span></div>
+          <div class="note-row-stats"><span>❤️ 168</span><span>⭐ 25</span><span>💬 4</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69bab580000000002301fe4b" target="_blank">3.18张凌赫出妆</a> · @吃口蛋挞<span class="note-time">3/18 22:24</span></div>
+          <div class="note-row-stats"><span>❤️ 138</span><span>⭐ 5</span><span>💬 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4fef000000002301c8b9" target="_blank">318出妆｜一年之后终于再见🥹</a> · @匿名上网<span class="note-time">3/18 15:10</span></div>
+          <div class="note-row-stats"><span>❤️ 135</span><span>⭐ 26</span><span>💬 6</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4ee3000000001b020fd9" target="_blank">0318 进出妆 发现偷偷抿嘴笑了</a> · @SHAWN9H<span class="note-time">3/18 15:06</span></div>
+          <div class="note-row-stats"><span>❤️ 77</span><span>⭐ 8</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba648c000000001a02e3c0" target="_blank">3.18出妆，惊为天人</a> · @小菇凉<span class="note-time">3/18 16:38</span></div>
+          <div class="note-row-stats"><span>❤️ 10</span><span>⭐ 4</span><span>💬 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4d9c000000001a02f348" target="_blank">3.18张凌赫今天穿的有点帅呀</a> · @momo小核桃💕<span class="note-time">3/18 15:00</span></div>
+          <div class="note-row-stats"><span>❤️ 12</span><span>⭐ 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69baa897000000002301646d" target="_blank">3.18出妆💌</a> · @晴雨<span class="note-time">3/18 21:28</span></div>
+          <div class="note-row-stats"><span>❤️ 13</span><span>⭐ 1</span></div>
+        </div>
+      </div>
+      </details>
+    </div>
+
+    <!-- ============ 分类六：粉丝站 & 线下应援 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🎪</span>
+        分类六：粉丝站 & 线下应援
+      </div>
+
+      <div class="analysis-block">
+        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-text">
+          <strong>🔹 核心内容</strong>
+          MAMORU（张凌赫官方粉丝站）发布的"侯爷！侯爷！马甲掉了！！"获1.6万赞，是粉丝站影响力的体现。线下应援包括：百丽门店打卡、全棉时代海报领取、霸王茶姬杯贴制作等。
+          <div class="inline-quote">"侯爷！侯爷！马甲掉了！！"（16819赞）—— @MAMORU | 张凌赫 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba780200000000230177f6" target="_blank">《侯爷！侯爷！马甲掉了！！》</a></div>
+
+          <strong>🔹 社群氛围</strong>
+          粉丝社群归属感强烈，应援活动组织有序。杯贴制作、温感卡收集、全棉时代打卡领海报等形成完整的粉丝经济链条。小红书已成为张凌赫粉丝的重要社区。
+          <div class="inline-quote">"张凌赫这回是真爆了"（7赞）—— @阿稚 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69babc9e0000000021011421" target="_blank">《张凌赫这回是真爆了》</a></div>
+          <div class="inline-quote">"没出道前的张凌赫也一样很帅呀！"（6赞）—— @是美森啊~ · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba952f000000001b022fef" target="_blank">《没出道前的张凌赫也一样很帅呀！》</a></div>
+
+          <strong>🔹 粉丝经济</strong>
+          收藏卡上线、杯贴制作分享（无偿）、温感卡收购需求……粉丝周边生态活跃，体现了高粘性和高参与度。
+        </div>
+      </div>
+
+      <details class="notes-details">
+        <summary>📎 点击展开所有相关笔记</summary>
+      <div class="notes-list">
+        <div class="notes-list-header">🏢 粉丝站（1篇 · 高互动）</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba780200000000230177f6" target="_blank">侯爷！侯爷！马甲掉了！！</a><span class="fan-tag">MAMORU粉丝站</span><span class="note-time">3/18 18:01</span></div>
+          <div class="note-row-stats"><span>❤️ 1.6w</span><span>⭐ 1206</span><span>💬 350</span></div>
+        </div>
+
+        <div class="notes-list-header" style="margin-top:10px;">👥 粉丝日常 & 应援</div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba4dbf00000000230139ee" target="_blank">今天笑了！！！</a> · @ZlinG1-1z<span class="note-time">3/18 15:01</span></div>
+          <div class="note-row-stats"><span>❤️ 574</span><span>⭐ 42</span><span>↗️ 156</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9cbb000000001e00e2a9" target="_blank">(视频) 粉丝日常</a> · @跳跳糖不跳了<span class="note-time">3/18 20:38</span></div>
+          <div class="note-row-stats"><span>❤️ 31</span><span>⭐ 6</span><span>💬 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69bab4b9000000002800a713" target="_blank">张凌赫这十张壁纸谁还没有啊啊啊啊啊好帅</a> · @寻知<span class="note-time">3/18 22:20</span></div>
+          <div class="note-row-stats"><span>❤️ 8</span><span>⭐ 3</span><span>💬 6</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69babc9e0000000021011421" target="_blank">张凌赫这回是真爆了</a> · @阿稚<span class="note-time">3/18 22:54</span></div>
+          <div class="note-row-stats"><span>❤️ 7</span><span>💬 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba952f000000001b022fef" target="_blank">没出道前的张凌赫也一样很帅呀！</a> · @是美森啊~<span class="note-time">3/18 20:06</span></div>
+          <div class="note-row-stats"><span>❤️ 6</span><span>💬 2</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9404000000002102e3ee" target="_blank">快来关注张凌赫</a> · @琴弦会断，但你不会...<span class="note-time">3/18 20:01</span></div>
+          <div class="note-row-stats"><span>❤️ 5</span><span>↗️ 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba69ac0000000022000818" target="_blank">张凌赫动态壁纸更新第二组</a> · @猫不肉<span class="note-time">3/18 17:00</span></div>
+          <div class="note-row-stats"><span>❤️ 3</span><span>⭐ 2</span><span>💬 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba9d9d00000000210121e5" target="_blank">张凌赫头像</a> · @momo（追更逐玉版）<span class="note-time">3/18 20:42</span></div>
+          <div class="note-row-stats"><span>❤️ 1</span><span>⭐ 2</span><span>💬 1</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-row-left"><a href="https://www.xiaohongshu.com/explore/69ba959f0000000021006dc4" target="_blank">收藏一波高清壁纸</a> · @窝居喜<span class="note-time">3/18 20:07</span></div>
+          <div class="note-row-stats"><span>❤️ 13</span><span>⭐ 5</span></div>
+        </div>
+      </div>
+      </details>
+    </div>
+
+    <!-- ============ 明星近期日程 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">📅</span>
+        明星近期日程
+        <span class="badge">小红书信息整理</span>
+      </div>
+
+      <!-- 日程1：百丽品牌活动 4.2 -->
+      <div class="schedule-card">
+        <div class="schedule-card-header">
+          <div class="schedule-date">4月2日 周三</div>
+          <div class="schedule-name">百丽BELLE品牌线下活动</div>
+          <div class="schedule-tags">
+            <span class="schedule-tag tag-free">🆓 免费公开</span>
+          </div>
+        </div>
+        <div class="schedule-details">
+          <span class="schedule-label">📍 地点</span>
+          <span class="schedule-value">深圳 · 宝安壹方城</span>
+          <span class="schedule-label">⏰ 时间</span>
+          <span class="schedule-value">2026年4月2日（具体时段待官方公布）</span>
+          <span class="schedule-label">🎫 门票</span>
+          <span class="schedule-value">无需门票，商场公开活动，免费参与</span>
+          <span class="schedule-label">💡 参与方式</span>
+          <span class="schedule-value">无需购票报名，建议提前到商场蹲位占座</span>
+          <span class="schedule-label">📌 备注</span>
+          <span class="schedule-value">百丽品牌代言一周年活动，原定4.13后调整至4.2（详见下方日程变更）</span>
+        </div>
+        <div class="schedule-source">
+          📎 信息来源：<a href="https://www.xiaohongshu.com/explore/69bb5d4400000000230239c4" target="_blank">小布丁通知：百丽活动调整</a>、<a href="https://www.xiaohongshu.com/explore/69ba6864000000001a02f780" target="_blank">哆仔票务活动预告</a>
+        </div>
+      </div>
+
+      <!-- 日程2：百丽品牌活动 4.13 -->
+      <div class="schedule-card">
+        <div class="schedule-card-header">
+          <div class="schedule-date">4月13日 周日</div>
+          <div class="schedule-name">百丽BELLE品牌见面会</div>
+          <div class="schedule-tags">
+            <span class="schedule-tag tag-weekend">🗓 周末</span>
+            <span class="schedule-tag tag-free">🆓 免费公开</span>
+          </div>
+        </div>
+        <div class="schedule-details">
+          <span class="schedule-label">📍 地点</span>
+          <span class="schedule-value">深圳 · 宝安壹方城</span>
+          <span class="schedule-label">⏰ 时间</span>
+          <span class="schedule-value">2026年4月13日（具体时段待官方公布）</span>
+          <span class="schedule-label">🎫 门票</span>
+          <span class="schedule-value">无需门票，商场公开活动，免费参与</span>
+          <span class="schedule-label">💡 参与方式</span>
+          <span class="schedule-value">无需购票报名，建议提前到商场蹲位。穿舒适鞋更好打卡</span>
+          <span class="schedule-label">📌 备注</span>
+          <span class="schedule-value">多个信源提及4.13见面会，与4.2活动为同系列不同场次（待官方确认）</span>
+        </div>
+        <div class="schedule-source">
+          📎 信息来源：<a href="https://www.xiaohongshu.com/explore/69b903ab000000002102c63e" target="_blank">薯薯演出票务：张凌赫深圳百丽4.13见面会</a>、<a href="https://www.xiaohongshu.com/explore/69b83f90000000002301d717" target="_blank">YY爱追星：4.2深圳见！百丽见面会</a>
+        </div>
+      </div>
+
+      <!-- 日程3：开始推理吧4发布会 -->
+      <div class="schedule-card">
+        <div class="schedule-card-header">
+          <div class="schedule-date">4月15-16日</div>
+          <div class="schedule-name">《开始推理吧4》发布会</div>
+          <div class="schedule-tags">
+            <span class="schedule-tag tag-tbd">📢 日期待确认</span>
+          </div>
+        </div>
+        <div class="schedule-details">
+          <span class="schedule-label">📍 地点</span>
+          <span class="schedule-value">北京（具体地点待公布）</span>
+          <span class="schedule-label">⏰ 时间</span>
+          <span class="schedule-value">2026年4月15日或16日（不同信源日期有差异）</span>
+          <span class="schedule-label">🎫 门票</span>
+          <span class="schedule-value">综艺节目发布会，入场方式待官方公布</span>
+          <span class="schedule-label">💡 参与方式</span>
+          <span class="schedule-value">关注节目官方及平台官宣获取参与信息</span>
+          <span class="schedule-label">📌 备注</span>
+          <span class="schedule-value">张凌赫为常驻嘉宾，同期嘉宾包括刘宇宁、金靖、周柯宇等</span>
+        </div>
+        <div class="schedule-source">
+          📎 信息来源：<a href="https://www.xiaohongshu.com/explore/69b67fcf000000001a02aaf9" target="_blank">兔牙票务：4.15开推理吧发布会</a>、<a href="https://www.xiaohongshu.com/explore/69ba82cf0000000021004110" target="_blank">蜡笔小欣：4.16开始推理吧发布会</a>
+        </div>
+      </div>
+
+      <!-- 日程4：全棉时代打卡活动 -->
+      <div class="schedule-card">
+        <div class="schedule-card-header">
+          <div class="schedule-date">3.18 - 4.18</div>
+          <div class="schedule-name">全棉时代 × 张凌赫海报打卡活动</div>
+          <div class="schedule-tags">
+            <span class="schedule-tag tag-ongoing">🔥 进行中</span>
+            <span class="schedule-tag tag-free">🆓 免费领取</span>
+            <span class="schedule-tag tag-nearest">📍 离我最近</span>
+          </div>
+        </div>
+        <div class="schedule-details">
+          <span class="schedule-label">📍 地点</span>
+          <span class="schedule-value">全棉时代全国门店（线下门店专属活动）</span>
+          <span class="schedule-label">⏰ 时间</span>
+          <span class="schedule-value">2026年3月18日 — 4月18日</span>
+          <span class="schedule-label">🎫 门票</span>
+          <span class="schedule-value">免费参与，无需门票</span>
+          <span class="schedule-label">💡 参与方式</span>
+          <span class="schedule-value">
+            ① 到店拍摄含张凌赫形象的图片≥3张<br>
+            ② 发布小红书（定位门店+带话题 #张凌赫的全棉舒适学#）<br>
+            ③ 注册/出示全棉时代会员，领取张凌赫巨幅海报（AB款随机）
+          </span>
+          <span class="schedule-label">📌 备注</span>
+          <span class="schedule-value">每ID限领1份，数量有限先到先得</span>
+        </div>
+        <div class="schedule-source">
+          📎 信息来源：<a href="https://www.xiaohongshu.com/explore/69bb8d79000000002301e8db" target="_blank">深圳海雅缤纷城：张凌赫海报空降全棉时代</a>
+        </div>
+      </div>
+
+      <!-- 日程变更 -->
+      <div class="schedule-change-section">
+        <div class="schedule-change-title">⚠️ 近期日程变更</div>
+        <div class="schedule-change-item">
+          <strong>百丽BELLE深圳壹方城活动改期：</strong>原定4月13日的百丽品牌活动已调整至<strong>4月2日</strong>。多位本地消息源（票务、粉丝群）确认调整信息，但也有消息指4.13仍有活动场次。建议持续关注百丽品牌官方公告，以最终官宣为准。
+        </div>
+        <div class="schedule-source" style="margin-top: 8px; padding-top: 6px; border-top: none;">
+          📎 变更来源：<a href="https://www.xiaohongshu.com/explore/69bb5d4400000000230239c4" target="_blank">小布丁通知：百丽活动调整到4.2号</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+      <p>📊 数据来源：小红书平台 | 日期：2026年3月18日（北京时间）</p>
+      <p>🔍 搜索关键词："张凌赫" | 数据采集：按最多点赞 + 按最新 + 按最多收藏 + 综合排序（四维度翻页抓取）</p>
+      <p>共抓取240条去重后得到88篇3月18日笔记 | 总互动量：253,903</p>
+      <p style="margin-top:8px;">📈 统计：总点赞 209,302 | 总收藏 17,440 | 总评论 6,572 | 总分享 19,589</p>
+    </div>
+
+  </div>
+</body>
+</html>
