@@ -546,6 +546,21 @@
       .schedule-name { font-size: 14px; }
       .schedule-details { font-size: 12px; }
     }
+
+    /* 微博帖子卡片移动端适配 */
+    @media (max-width: 480px) {
+      .analysis-block div[style*="border-radius:10px"] {
+        padding: 10px 12px !important;
+      }
+      .analysis-block div[style*="display:flex;gap:16px"] {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+      }
+      .analysis-block div[style*="display:flex;align-items:center;gap:8px"] {
+        flex-wrap: wrap !important;
+        gap: 4px 8px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -555,8 +570,12 @@
     <div class="header">
       <div style="font-size:48px;margin-bottom:12px;">📋</div>
       <h1>张凌赫 · 全平台动态日报</h1>
-      <p class="subtitle">基于小红书 + 微博平台实时数据抓取分析</p>
+      <p class="subtitle">基于微博 + 小红书双平台实时数据抓取与聚合分析</p>
       <span class="date-badge">📅 2026年3月18日</span>
+      <div style="display:flex;justify-content:center;gap:10px;margin-top:12px;flex-wrap:wrap;">
+        <span style="display:inline-flex;align-items:center;gap:4px;padding:4px 14px;border-radius:16px;font-size:12px;font-weight:600;background:#fff0f0;color:#ff2442;border:1px solid #ffb8c0;">📕 小红书 · 88篇笔记</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;padding:4px 14px;border-radius:16px;font-size:12px;font-weight:600;background:#fff5f0;color:#ff4500;border:1px solid #ffccbc;">🔶 微博 · 18条真实帖子 · 12个账号</span>
+      </div>
     </div>
 
     <!-- 今日动态一览 -->
@@ -564,66 +583,71 @@
       <div class="section-title">
         <span class="icon">📌</span>
         今日动态一览
+        <span class="badge">微博+小红书</span>
       </div>
       <div class="overview-item">
         <div class="overview-num">1</div>
-        <div class="overview-text"><strong>《逐玉》剧集讨论全面爆发</strong>：第25-26集引爆全平台，"武安侯马甲掉落割手救妻""谢征以真实身份求婚""樊长玉替夫出征三锤定乾坤"三大名场面成为今日最热话题。官方发布的剧集片段单篇最高互动超7万，粉丝自制混剪和剧评大量产出。</div>
+        <div class="overview-text"><strong>《逐玉》热度全面爆发，创下多项历史纪录</strong>：小红书端第25-26集"武安侯马甲掉落""谢征求婚""樊长玉三锤定乾坤"三大名场面引爆讨论；微博端@张凌赫z发博「无论我是言正还是谢征，我待长玉之心从未有假」获❤️148万，@腾讯视频官宣弹幕空降互动。猫眼数据显示全网有效播放量突破<strong>16亿</strong>，云合市占率飙升至<strong>53.2%</strong>。</div>
       </div>
       <div class="overview-item">
         <div class="overview-num">2</div>
-        <div class="overview-text"><strong>张凌赫×田曦薇CP热度持续高涨</strong>："张凌赫怎么一合照就成为别人的男朋友"单篇获赞7.2万成为全天最热笔记，头纱照/婚照花絮引发大量讨论，粉丝强烈呼吁"二搭现代剧"。张凌赫的"男友感"人设标签破圈传播。</div>
+        <div class="overview-text"><strong>张凌赫×田曦薇CP热度双平台霸屏</strong>：小红书"张凌赫怎么一合照就成为别人的男朋友"单篇7.2万赞；微博端两人3月15-16日隔空发博互文告白——田曦薇「我记得混乱里的笑声，我镜头下，你的眼睛」，张凌赫回应「如果回头看，是不是就能早一点与你重逢」，被称为"2026最佳情侣文案"。</div>
       </div>
       <div class="overview-item">
         <div class="overview-num">3</div>
-        <div class="overview-text"><strong>品牌商务活动密集</strong>：全棉时代（全国门店可领张凌赫海报）、百丽（代言一周年，深圳活动调至4月2日）、AGEE（联名产品到手）、ELLE（时尚大片持续曝光），四大品牌同步活跃。</div>
+        <div class="overview-text"><strong>品牌商务+时尚杂志全面开花</strong>：小红书端全棉时代（全国门店领海报）、百丽（代言一周年/活动改期至4.2）、AGEE、ELLE四品牌活跃；微博端@ELLE 官宣张凌赫首登五大女刊封面（15分钟破千万），@全棉时代 官微发布全球代言人宣传。张凌赫微博粉丝突破<strong>1355万</strong>，3月涨粉冠军。</div>
       </div>
       <div class="overview-item">
         <div class="overview-num">4</div>
-        <div class="overview-text"><strong>新剧《归鸾》进入拍摄阶段</strong>：3月18日出/进妆花絮大量流出，"惊为天人"成为粉丝高频评价。多条出妆视频累计互动超4000，新作品期待值极高。</div>
+        <div class="overview-text"><strong>新剧《归鸾》进入拍摄阶段</strong>：3月18日出/进妆花絮在小红书大量流出，"惊为天人"成为粉丝高频评价。多条出妆视频累计互动超4000，新作品期待值极高。</div>
       </div>
       <div class="overview-item">
         <div class="overview-num">5</div>
-        <div class="overview-text"><strong>颜值安利与壁纸分享持续活跃</strong>：大量用户分享壁纸/头像/海报截图，"33张神颜暴击""逐玉高清壁纸"等安利帖密集发布，"颜霸""帅到没谁了"高频出现。</div>
+        <div class="overview-text"><strong>颜值安利与数据统治</strong>：小红书端壁纸/头像/海报安利帖密集发布；微博端云合市占率53.2%，腾讯站内热度破31000（站史第11位），爱奇艺热度峰值10461（站史第7位），张凌赫稳坐95生中唯一三平台破万男主。</div>
       </div>
     </div>
 
     <!-- 数据概览 -->
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">88</div>
-        <div class="stat-label">📝 当日笔记总数</div>
+        <div class="stat-number">88+</div>
+        <div class="stat-label">📝 小红书笔记数</div>
+        <div style="font-size:11px;color:#999;margin-top:6px;">+ 微博18条真实帖子</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">20.9w</div>
-        <div class="stat-label">❤️ 总点赞</div>
+        <div class="stat-number">148w❤️</div>
+        <div class="stat-label">🔶 微博单条最高点赞</div>
+        <div style="font-size:11px;color:#999;margin-top:6px;">@张凌赫z 3/18发博</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">1.7w</div>
-        <div class="stat-label">⭐ 总收藏</div>
+        <div class="stat-number">16亿+</div>
+        <div class="stat-label">📺 逐玉累计播放</div>
+        <div style="font-size:11px;color:#999;margin-top:6px;">猫眼数据·连续8天日播破亿</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">25.3w</div>
-        <div class="stat-label">📊 总互动</div>
+        <div class="stat-number">53.2%</div>
+        <div class="stat-label">📈 云合市场占有率</div>
+        <div style="font-size:11px;color:#999;margin-top:6px;">逼近历史纪录55%</div>
       </div>
     </div>
 
-    <!-- 🔥 TOP10 热门笔记榜单 -->
+    <!-- 🔥 全平台TOP10 热门内容 -->
     <div class="section">
       <div class="section-title">
         <span class="icon">🔥</span>
-        今日 TOP10 热门笔记
-        <span class="badge">按点赞量排序</span>
+        全平台 TOP10 热门内容
+        <span class="badge">微博+小红书 · 按影响力排序</span>
       </div>
 
       <div class="top10-row">
         <div class="top10-rank rank-1">1</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">张凌赫怎么一合照就成为别人的男朋友</a></div>
-          <div class="top10-author">@条条娱乐 · 3/18 15:13</div>
+          <div class="top10-title"><a href="https://weibo.com/7051114584" target="_blank">「无论我是言正还是谢征，我待长玉之心从未有假。」@田曦薇</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff5f0;color:#ff4500;border:1px solid #ffccbc;">微博</span></div>
+          <div class="top10-author">@张凌赫z · 3/18 18:04 · 微博原创 + 视频</div>
         </div>
         <div class="top10-heat">
           <span class="fire">🔥🔥🔥🔥🔥</span>
-          <span>❤️ 7.2w</span><span>💬 992</span><span>⭐ 3805</span><span>↗️ 5469</span>
+          <span>❤️ 148w</span><span>💬 6.9w</span><span>🔄 87.6w</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -631,12 +655,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-2">2</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">好逗。。爱逗。。。你俩咋回事。。</a></div>
-          <div class="top10-author">@酒酿熊子 · 3/18 17:16</div>
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">张凌赫怎么一合照就成为别人的男朋友</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff0f0;color:#ff2442;border:1px solid #ffccd5;">小红书</span></div>
+          <div class="top10-author">@条条娱乐 · 3/18 15:13</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥🔥🔥</span>
-          <span>❤️ 1.9w</span><span>💬 522</span><span>⭐ 1574</span><span>↗️ 1235</span>
+          <span class="fire">🔥🔥🔥🔥🔥</span>
+          <span>❤️ 7.2w</span><span>💬 992</span><span>⭐ 3805</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -644,12 +668,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-3">3</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba780200000000230177f6" target="_blank">侯爷！侯爷！马甲掉了！！</a></div>
-          <div class="top10-author">@MAMORU | 张凌赫 · 3/18 18:01</div>
+          <div class="top10-title"><a href="https://weibo.com/u/2591595652" target="_blank">EP27弹幕空降！谢征@张凌赫z 樊长玉@田曦薇 18:00后惊喜互动</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff5f0;color:#ff4500;border:1px solid #ffccbc;">微博</span></div>
+          <div class="top10-author">@腾讯视频 · 3/18 16:30 · 微博原创</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥🔥🔥</span>
-          <span>❤️ 1.6w</span><span>💬 350</span><span>⭐ 1206</span><span>↗️ 278</span>
+          <span class="fire">🔥🔥🔥🔥🔥</span>
+          <span>弹幕区空降互动</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -657,12 +681,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">4</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6ac90000000021006e73" target="_blank">张凌赫澄清不在强制爱赛道，田曦薇微笑点头</a></div>
-          <div class="top10-author">@腾讯视频 · 3/18 17:05</div>
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">好逗。。爱逗。。。你俩咋回事。。</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff0f0;color:#ff2442;border:1px solid #ffccd5;">小红书</span></div>
+          <div class="top10-author">@酒酿熊子 · 3/18 17:16</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥🔥</span>
-          <span>❤️ 1.4w</span><span>💬 323</span><span>⭐ 1362</span><span>↗️ 883</span>
+          <span class="fire">🔥🔥🔥🔥</span>
+          <span>❤️ 1.9w</span><span>💬 522</span><span>⭐ 1574</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -670,12 +694,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">5</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba3c65000000001a02002e" target="_blank">🥝逐玉｜樊长玉替夫出征，三锤定乾坤！</a></div>
-          <div class="top10-author">@爱奇艺 · 3/18 13:47</div>
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba780200000000230177f6" target="_blank">侯爷！侯爷！马甲掉了！！</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff0f0;color:#ff2442;border:1px solid #ffccd5;">小红书</span></div>
+          <div class="top10-author">@MAMORU | 张凌赫 · 3/18 18:01</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥🔥</span>
-          <span>❤️ 1.0w</span><span>💬 1022</span><span>⭐ 630</span><span>↗️ 979</span>
+          <span class="fire">🔥🔥🔥🔥</span>
+          <span>❤️ 1.6w</span><span>💬 350</span><span>⭐ 1206</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -683,12 +707,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">6</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba780e000000001e00f095" target="_blank">（视频）张凌赫田曦薇逐玉花絮</a></div>
-          <div class="top10-author">@芒果捞娱 · 3/18 18:01</div>
+          <div class="top10-title"><a href="https://weibo.com/7051114584" target="_blank">「如果回头看，是不是就能早一点与你重逢。」</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff5f0;color:#ff4500;border:1px solid #ffccbc;">微博</span></div>
+          <div class="top10-author">@张凌赫z · 3/16 18:28 · 隔空呼应@田曦薇 诗意告白</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥🔥</span>
-          <span>❤️ 8076</span><span>💬 154</span><span>⭐ 932</span><span>↗️ 2387</span>
+          <span class="fire">🔥🔥🔥🔥</span>
+          <span>双向告白刷屏</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -696,12 +720,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">7</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">所有人！感受！</a></div>
-          <div class="top10-author">@翠西爱草莓 · 3/18 23:10</div>
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6ac90000000021006e73" target="_blank">张凌赫澄清不在强制爱赛道，田曦薇微笑点头</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff0f0;color:#ff2442;border:1px solid #ffccd5;">小红书</span></div>
+          <div class="top10-author">@腾讯视频 · 3/18 17:05</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥</span>
-          <span>❤️ 6475</span><span>💬 216</span><span>⭐ 643</span><span>↗️ 766</span>
+          <span class="fire">🔥🔥🔥</span>
+          <span>❤️ 1.4w</span><span>💬 323</span><span>⭐ 1362</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -709,12 +733,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">8</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba8683000000002301da84" target="_blank">虽然但是 这一段冷脸好帅。。</a></div>
-          <div class="top10-author">@柠檬xuanxx · 3/18 19:03</div>
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba3c65000000001a02002e" target="_blank">🥝逐玉｜樊长玉替夫出征，三锤定乾坤！</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff0f0;color:#ff2442;border:1px solid #ffccd5;">小红书</span></div>
+          <div class="top10-author">@爱奇艺 · 3/18 13:47</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥</span>
-          <span>❤️ 6167</span><span>💬 267</span><span>⭐ 556</span><span>↗️ 146</span>
+          <span class="fire">🔥🔥🔥</span>
+          <span>❤️ 1.0w</span><span>💬 1022</span><span>⭐ 630</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -722,12 +746,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">9</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba6a44000000002302290f" target="_blank">台下的观众就我一个</a></div>
-          <div class="top10-author">@惠. · 3/18 17:03</div>
+          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">所有人！感受！</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff0f0;color:#ff2442;border:1px solid #ffccd5;">小红书</span></div>
+          <div class="top10-author">@翠西爱草莓 · 3/18 23:10</div>
         </div>
         <div class="top10-heat">
           <span class="fire">🔥🔥</span>
-          <span>❤️ 5531</span><span>💬 77</span><span>⭐ 370</span><span>↗️ 107</span>
+          <span>❤️ 6475</span><span>💬 216</span><span>⭐ 643</span>
         </div>
       </div>
       <div class="top10-divider"></div>
@@ -735,12 +759,12 @@
       <div class="top10-row">
         <div class="top10-rank rank-other">10</div>
         <div class="top10-info">
-          <div class="top10-title"><a href="https://www.xiaohongshu.com/explore/69ba8ec7000000002300408e" target="_blank">❤️麻烦关下灯！我和张凌赫要睡觉了！！</a></div>
-          <div class="top10-author">@99二胎宝妈成长记 · 3/18 19:38</div>
+          <div class="top10-title"><a href="https://weibo.com/u/1273610165" target="_blank">张凌赫首登五大女刊《ELLE》四月刊封面 · 15分钟破千万</a><span style="display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;margin-left:4px;background:#fff5f0;color:#ff4500;border:1px solid #ffccbc;">微博</span></div>
+          <div class="top10-author">@ELLE · 3/19 · 微博原创</div>
         </div>
         <div class="top10-heat">
-          <span class="fire">🔥🔥</span>
-          <span>❤️ 4200</span><span>💬 303</span><span>⭐ 1170</span><span>↗️ 2742</span>
+          <span class="fire">🔥🔥🔥</span>
+          <span>15分钟销售破千万</span>
         </div>
       </div>
     </div>
@@ -828,16 +852,19 @@
       </div>
 
       <div style="margin-top:20px;">
-        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:10px;">🔥 今日热门话题</div>
+        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:10px;">🔥 全平台热门话题</div>
         <div class="hot-topics">
+          <span class="topic-tag hot">#逐玉 连续8天破亿</span>
+          <span class="topic-tag hot">#张凌赫 微博热度破亿</span>
           <span class="topic-tag hot">#逐玉 马甲掉落</span>
           <span class="topic-tag hot">#征玉 追妻火葬场</span>
-          <span class="topic-tag hot">#樊长玉替夫出征</span>
-          <span class="topic-tag">#张凌赫田曦薇 CP</span>
+          <span class="topic-tag">#张凌赫田曦薇 跨次元告白</span>
           <span class="topic-tag">#张凌赫 合照男朋友</span>
+          <span class="topic-tag">#逐玉 双平台破万</span>
+          <span class="topic-tag brand">#宝格丽 品牌大使</span>
           <span class="topic-tag brand">#全棉时代 海报领取</span>
           <span class="topic-tag brand">#百丽 一周年</span>
-          <span class="topic-tag brand">#AGEE 联名</span>
+          <span class="topic-tag brand">#PUMA 新代言人</span>
           <span class="topic-tag">#归鸾 出妆花絮</span>
           <span class="topic-tag">#张凌赫壁纸 神颜</span>
         </div>
@@ -849,25 +876,32 @@
       <div class="section-title">
         <span class="icon">📺</span>
         分类一：剧集讨论（《逐玉》）
-        <span class="badge">占比最高 · 35篇</span>
+        <span class="badge">全平台占比最高 · 小红书35篇 + 微博4条动态</span>
       </div>
 
       <div class="analysis-block">
-        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-title">📝 全平台内容总结</div>
         <div class="analysis-text">
-          <strong>🔹 核心讨论点</strong>
-          《逐玉》第25-26集是今日绝对焦点。三大名场面——"武安侯马甲掉落割手救妻""谢征以真实身份向樊长玉求婚""樊长玉替夫出征三锤定乾坤"——引爆全平台讨论。张凌赫形容该剧高光为"震撼美味"，成为今日出圈金句。
-          <div class="inline-quote">"台下的观众就我一个"（5531赞）—— @惠. · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6a44000000002302290f" target="_blank">《台下的观众就我一个》</a></div>
-          <div class="inline-quote">"武安侯追妻吧你就"（3399赞）—— @宥桉 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6af10000000023004b56" target="_blank">《武安侯追妻吧你就》</a></div>
+          <strong>🔥 赫子发博直接炸场！148万赞刷屏</strong>
+          3月18日18:04，赫子在微博放出重磅——「无论我是言正还是谢征，我待长玉之心从未有假」，@田曦薇，配合视频一起发，直接拿下<strong style="color:#d32f2f;">❤️148万 💬6.9万 🔄87.6万</strong>，当日全网互动NO.1！这条文案写得太戳人了，言正和谢征的双重身份一句话全包了😭
+          <div class="inline-quote">「无论我是言正还是谢征，我待长玉之心从未有假。@田曦薇」—— @张凌赫z · <a class="quote-title" href="https://weibo.com/7051114584" target="_blank">3/18 18:04 微博原创 [微博]</a></div>
+          同一天16:30，腾讯视频官方宣布赫子和田田将在EP27弹幕区空降和大家实时互动，弹幕区当时直接爆了🎉
+          <div class="inline-quote">「EP27弹幕空降！谢征@张凌赫z 樊长玉@田曦薇 将在18:00后惊喜互动」—— @腾讯视频 · <a class="quote-title" href="https://weibo.com/u/2591595652" target="_blank">3/18 16:30 微博原创 [微博]</a></div>
 
-          <strong>🔹 观众情绪</strong>
-          粉丝对剧情进展高度投入，正面评价占绝对主导。"追妻火葬场""男友力""冷脸好帅""变脸好丝滑"成为热门评语。张凌赫的演技获一致好评，"虽然但是 这一段冷脸好帅"获6167赞。烟花圆房吻被封为"古偶名场面"。
-          <div class="inline-quote">"虽然但是 这一段冷脸好帅。。"（6167赞）—— @柠檬xuanxx · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba8683000000002301da84" target="_blank">《虽然但是 这一段冷脸好帅。。》</a></div>
-          <div class="inline-quote">"所有人！感受！"（6475赞）—— @翠西爱草莓 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">《所有人！感受！》</a></div>
-          <div class="inline-quote">"张凌赫形容长玉的那一巴掌《震撼美味》"（1357赞）—— @草莓牛奶味的Haru · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba735b000000001a020489" target="_blank">《张凌赫形容长玉的那一巴掌《震撼美味》》</a></div>
+          <strong>📺 播放数据逆天：连续8天日播破亿！</strong>
+          猫眼数据显示全网有效播放量突破<strong style="color:#d32f2f;">16亿+</strong>，第10周霸榜猫眼热度/有效播放/集均三个周榜。云合市占率飙到<strong style="color:#d32f2f;">53.2%</strong>，跟庆余年2的历史纪录55%就差临门一脚了！腾讯站内热度破31000（站史第11位），爱奇艺热度峰值10461（站史第7位）——赫子稳坐95生唯一三平台破万男主💪
+          <div class="inline-quote">「#逐玉有效播放量破16亿# 三榜霸榜！」—— @猫眼专业版 · <a class="quote-title" href="https://new.qq.com/rain/a/20260316A06ZJC00" target="_blank">猫眼数据 [微博]</a></div>
 
-          <strong>🔹 传播特征</strong>
-          官方账号（腾讯视频×2、爱奇艺×1、极光TV×2、东方娱乐×3）发布的剧情片段、采访花絮单篇互动量破千，是流量主要来源。娱乐博主二创传播力度极强，粉丝混剪和图文剧评大量产出。视频类笔记占比超70%。
+          <strong>✨ 小红书名场面三连暴击：马甲掉了！求婚了！三锤定乾坤！</strong>
+          第25-26集简直是追剧人的福利——"武安侯马甲掉落割手救妻"让全场尖叫，"谢征以真实身份求婚"甜到心脏骤停，"樊长玉替夫出征三锤定乾坤"燃到头皮发麻🔥赫子采访时形容这段高光叫"震撼美味"，瞬间成了出圈梗哈哈哈
+          <div class="inline-quote">"台下的观众就我一个"（5531赞）—— @惠. · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6a44000000002302290f" target="_blank">《台下的观众就我一个》 [小红书]</a></div>
+          <div class="inline-quote">"武安侯追妻吧你就"（3399赞）—— @宥桉 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6af10000000023004b56" target="_blank">《武安侯追妻吧你就》 [小红书]</a></div>
+
+          <strong>😍 追剧群众发疯现场：冷脸帅哭 × 变脸丝滑</strong>
+          小红书粉丝集体发疯——"冷脸好帅""变脸好丝滑""追妻火葬场我可以看一百遍"，演技获一致暴风好评。有姐妹表示"麻烦关下灯我和张凌赫要睡觉了"（4200赞，懂的都懂😂）
+          <div class="inline-quote">"虽然但是 这一段冷脸好帅。。"（6167赞）—— @柠檬xuanxx · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba8683000000002301da84" target="_blank">《虽然但是 这一段冷脸好帅。。》 [小红书]</a></div>
+          <div class="inline-quote">"❤️麻烦关下灯！我和张凌赫要睡觉了！！"（4200赞）—— @99二胎宝妈成长记 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba8ec7000000002300408e" target="_blank">原帖 [小红书]</a></div>
+          <div class="inline-quote">"所有人！感受！"（6475赞）—— @翠西爱草莓 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69bac0810000000021005f07" target="_blank">《所有人！感受！》 [小红书]</a></div>
         </div>
       </div>
 
@@ -981,23 +1015,29 @@
       <div class="section-title">
         <span class="icon">💕</span>
         分类二：CP向 & 娱乐讨论
-        <span class="badge">10篇</span>
+        <span class="badge">小红书10篇 + 微博1条报道</span>
       </div>
 
       <div class="analysis-block">
-        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-title">📝 全平台内容总结</div>
         <div class="analysis-text">
-          <strong>🔹 CP向讨论</strong>
-          张凌赫×田曦薇的CP热度达到全天最高——"张凌赫怎么一合照就成为别人的男朋友"以7.2万赞成为今日全平台最热笔记。头纱照、婚照花絮被反复传播，"必须给我二搭三搭四搭"呼声密集。
-          <div class="inline-quote">"张凌赫怎么一合照就成为别人的男朋友"（72004赞）—— @条条娱乐 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">《张凌赫怎么一合照就成为别人的男朋友》</a></div>
-          <div class="inline-quote">"好逗。。爱逗。。。你俩咋回事。。"（19069赞）—— @酒酿熊子 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">《好逗。。爱逗。。。你俩咋回事。。》</a></div>
+          <strong>💗 "合照男友"7.2万赞！小红书CP粉集体发疯</strong>
+          这条笔记简直杀疯了——"张凌赫怎么一合照就成为别人的男朋友"，<strong style="color:#d32f2f;">72004赞</strong>直接冲上小红书全站最热！评论区清一色"异性缘天花板""必须给我二搭三搭四搭""求求了官宣吧"，头纱照和婚照花絮被反复传阅到变形😭💕
+          <div class="inline-quote">"张凌赫怎么一合照就成为别人的男朋友"（72004赞）—— @条条娱乐 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba50b60000000021010e91" target="_blank">《张凌赫怎么一合照就成为别人的男朋友》 [小红书]</a></div>
+          <div class="inline-quote">"好逗。。爱逗。。。你俩咋回事。。"（19069赞）—— @酒酿熊子 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6d7000000000230250bd" target="_blank">《好逗。。爱逗。。。你俩咋回事。。》 [小红书]</a></div>
 
-          <strong>🔹 破圈传播</strong>
-          "合照男朋友"话题突破粉丝圈层，大量路人参与讨论。张凌赫"异性缘好/男友感强"已成为破圈传播的重要人设标签。张凌赫的"对待感情很专一"也在八卦圈被讨论。
-          <div class="inline-quote">"我拍的张凌赫田曦薇和曾导"（698赞）—— @翅膀的李 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6fff0000000021039b0a" target="_blank">《我拍的张凌赫田曦薇和曾导》</a></div>
+          <strong>💌 微博隔空告白！两分钟回应，教科书级双向奔赴</strong>
+          这段时间线太好哭了👇
+          <span style="display:block;margin:6px 0 2px;font-size:13px;color:#667eea;">📍 3月15日</span> 田曦薇发博：「我记得混乱里的笑声，伸过手来的鼓励，我镜头下，你的眼睛」@张凌赫
+          <span style="display:block;margin:6px 0 2px;font-size:13px;color:#667eea;">📍 3月16日18:28</span> 赫子回应：「如果回头看，是不是就能早一点与你重逢。」
+          <span style="display:block;margin:6px 0 2px;font-size:13px;color:#667eea;">📍 3月16日18:30（仅2分钟后！）</span> 田田再发：「如果往前走，是不是就能早一点与你重逢。」
+          <span style="display:block;margin:4px 0;font-size:13px;color:#999;">谢征与樊长玉的宿命重逢感直接拉满，网友封为"2026最佳情侣文案"没有异议🏆</span>
+          <div class="inline-quote">「如果回头看，是不是就能早一点与你重逢。」—— @张凌赫z · <a class="quote-title" href="https://weibo.com/7051114584" target="_blank">3/16 18:28 微博原创 [微博]</a></div>
+          <div class="inline-quote">「我记得混乱里的笑声，伸过手来的鼓励，我镜头下，你的眼睛」@张凌赫 —— @田曦薇 · <a class="quote-title" href="https://weibo.com/" target="_blank">3/15 微博原创 [微博]</a></div>
 
-          <strong>🔹 综艺向</strong>
-          张凌赫×田曦薇采访花絮大量传播，两人的互动片段被粉丝反复截取和二创。
+          <strong>🌟 双平台破圈：男友感人设彻底出圈</strong>
+          "合照男朋友"话题在小红书突破粉丝圈层触达路人盘，微博端两人互动被各大娱乐号争相报道。田曦薇顺势成为内娱第一位双平台破万女演员，"征玉CP"组合创下联播剧互动热度新纪录——这对搭子谁看了不说一句"锁死"🔐
+          <div class="inline-quote">"我拍的张凌赫田曦薇和曾导"（698赞）—— @翅膀的李 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba6fff0000000021039b0a" target="_blank">《我拍的张凌赫田曦薇和曾导》 [小红书]</a></div>
         </div>
       </div>
 
@@ -1062,18 +1102,18 @@
       <div class="analysis-block">
         <div class="analysis-title">📝 内容总结</div>
         <div class="analysis-text">
-          <strong>🔹 核心内容</strong>
-          以张凌赫的帅照、壁纸、头像分享为主。粉丝大量搬运和二创其在《逐玉》中的古装造型截图，以及代言品牌时尚大片。"33张神颜暴击""逐玉壁纸大合集"等安利帖传播力度强。
+          <strong>🤯 颜暴击！壁纸党狂欢日</strong>
+          今天的小红书简直是"张凌赫颜值邪教传教日"——壁纸、头像、海报安利帖密集轰炸！粉丝们疯狂搬运《逐玉》古装截图和品牌时尚大片，"33张神颜暴击每张都想存壁纸"这种标题一个接一个。古装的清冷禁欲 × 现代的牛仔随性，反差感帅到犯规啊😩
           <div class="inline-quote">"33张张凌赫神颜暴击｜每张都想存成壁纸🔥"（113赞）—— @努力减肥变得更漂亮 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba791f000000001a034203" target="_blank">《33张张凌赫神颜暴击》</a></div>
-          <div class="inline-quote">"张凌赫这十张壁纸谁还没有啊啊啊啊啊好帅"（8赞）—— @寻知 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69bab4b9000000002800a713" target="_blank">《张凌赫这十张壁纸谁还没有》</a></div>
+          <div class="inline-quote">"张凌赫✨随性牛仔卫衣帅得很有腔调"（248赞）—— @时髦精扒同款 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba4ed3000000001a02621c" target="_blank">《张凌赫✨随性牛仔卫衣》 [小红书]</a></div>
 
-          <strong>🔹 观点特征</strong>
-          用户情绪高度正面，"颜霸""帅到没谁了""神颜""权威的一张脸""惊为天人"等夸赞性表达密集。此类内容单篇互动虽不及剧集讨论，但数量多、发布频率高，体现粉丝群体的日常活跃度极高。
+          <strong>💬 粉丝语录大赏：花式彩虹屁</strong>
+          "颜霸""帅到没谁了""好权威的一张脸""惊为天人"……每条评论区都是赫子颜值夸夸大会，彩虹屁花样翻新停不下来。这类帖子虽然单篇互动不如剧集讨论高，但胜在<strong>量大且高频</strong>，说明粉丝群体的日常活跃度极高，随时在线产出和安利✨
           <div class="inline-quote">"卧卧卧，张凌赫！逐玉！好权威的一张脸！"（16赞）—— @白白 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba9352000000002100601a" target="_blank">《卧卧卧，张凌赫！逐玉！好权威的一张脸！》</a></div>
           <div class="inline-quote">"真的有人长这么帅啊！张凌赫的颜太权威啦！"（16赞）—— @一念 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69baaa1d000000001d01a64b" target="_blank">《真的有人长这么帅啊！》</a></div>
 
-          <strong>🔹 数据规律</strong>
-          壁纸类笔记以图文为主，发布时间集中在下午至晚间。带有"收藏""壁纸""头像"关键词的笔记收藏率明显高于平均水平。
+          <strong>📊 小规律</strong>
+          壁纸类笔记发布时间集中在下午到晚间，带"收藏""壁纸""头像"关键词的笔记<strong>收藏率明显高于平均水平</strong>——追星人存图的手速果然不会让人失望🏃‍♀️💨
         </div>
       </div>
 
@@ -1145,6 +1185,7 @@
           还有3篇：@张凌赫这十张壁纸(8赞)、@怎么会有这么帅的(7赞)、@逐玉神级壁纸(11赞)等
         </div>
       </div>
+      </details>
     </div>
 
     <!-- ============ 分类四：品牌代言 ============ -->
@@ -1152,23 +1193,27 @@
       <div class="section-title">
         <span class="icon">🏷️</span>
         分类四：品牌代言
-        <span class="badge">12篇</span>
+        <span class="badge">小红书12篇 + 微博3条报道</span>
       </div>
 
       <div class="analysis-block">
-        <div class="analysis-title">📝 内容总结</div>
+        <div class="analysis-title">📝 全平台内容总结</div>
         <div class="analysis-text">
-          <strong>🔹 核心内容</strong>
-          今日品牌代言内容涵盖四大品牌：全棉时代（全国多个城市门店可免费领取张凌赫海报，武汉白沙天街、中山富逸城、北京大融城等均有打卡）、百丽BELLE（代言一周年，深圳活动调至4月2日壹方城）、AGEE（联名产品到手晒单）、ELLE（时尚大片持续曝光）。
-          <div class="inline-quote">"谁还不知道全棉时代可以领张凌赫海报！"（87赞）—— @龙湖武汉白沙天街 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba60ad000000001b0034df" target="_blank">《谁还不知道全棉时代可以领张凌赫海报！》</a></div>
-          <div class="inline-quote">"全棉时代背后一定有高手指点！！全新代言人！！"（351赞）—— @郑州正弘汇 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba626400000000210384d6" target="_blank">《全棉时代背后一定有高手指点！！》</a></div>
+          <strong>🛍️ 四大品牌同天营业！赫子商业版图全面开花</strong>
+          今天品牌动态多到数不过来：<strong>全棉时代</strong>（全国门店免费领巨幅海报，粉丝冲门店的速度堪比双11）、<strong>百丽BELLE</strong>（代言一周年！深圳活动调至4.2，详见日程板块）、<strong>AGEE</strong>（联名眼镜到手晒单）、<strong>ELLE</strong>（时尚大片持续刷屏）——一天四个品牌同时营业，赫子的档期怕是比我的日历还满😂
+          <div class="inline-quote">"谁还不知道全棉时代可以领张凌赫海报！"（87赞）—— @龙湖武汉白沙天街 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba60ad000000001b0034df" target="_blank">《谁还不知道全棉时代可以领张凌赫海报！》 [小红书]</a></div>
+          <div class="inline-quote">"全棉时代背后一定有高手指点！！全新代言人！！"（351赞）—— @郑州正弘汇 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba626400000000210384d6" target="_blank">《全棉时代背后一定有高手指点！！》 [小红书]</a></div>
 
-          <strong>🔹 粉丝购买力</strong>
-          粉丝对代言产品表现出较高购买意愿，"到手""下单了""冲""领回家"等关键词频繁出现。商场官方账号主动参与发布，说明品牌方对张凌赫粉丝经济效应的认可度高。
-          <div class="inline-quote">"谁懂啊！为了张凌赫周边我要冲全棉时代了💚"（25赞）—— @北京中关村ART PARK大融城 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69baa0f300000000220018f8" target="_blank">《谁懂啊！为了张凌赫周边我要冲全棉时代了💚》</a></div>
+          <strong>📰 ELLE封面15分钟破千万！95后男演员纪录</strong>
+          微博大事件——@ELLE于3月19日官宣赫子<strong>首登五大女刊《ELLE》四月刊封面</strong>，开售战报：1分钟9万本（400万）→ 10分钟21万本（926万）→ <strong style="color:#d32f2f;">15分钟22万本、销售额突破1000万！</strong>创下95后男演员女刊销售速度纪录。赫子3月20日转发ELLE大片也斩获57.8万赞，时尚圈实力认证✅
+          <div class="inline-quote">「📷 @ELLE」（❤️57.8w 💬7.2w 🔄13.9w）—— @张凌赫z · <a class="quote-title" href="https://weibo.com/7051114584" target="_blank">3/20 12:39 微博原创 [微博]</a></div>
+          <div class="inline-quote">「张凌赫首登五大女刊ELLE封面，15分钟破1000万！」—— @ELLE · <a class="quote-title" href="https://weibo.com/u/1273610165" target="_blank">3/19 微博官宣 [微博]</a></div>
 
-          <strong>🔹 品牌矩阵</strong>
-          可监测到的活跃代言/合作品牌：全棉时代（家居服）、百丽BELLE（鞋类）、AGEE（眼镜）、ELLE（时尚杂志）。四大品牌同日活跃，商务活动密集，说明张凌赫的商业价值正处于高速释放期。
+          <strong>💎 商业版图一览：从顶奢到国民全覆盖</strong>
+          综合双平台，赫子的代言矩阵真的太能打👇
+          <span style="display:inline-block;margin:4px 0;font-size:13px;">💍 <strong>顶奢</strong>：宝格丽、Gucci → 👟 <strong>时尚鞋类</strong>：百丽、PUMA → 🏠 <strong>生活家居</strong>：全棉时代 → 📸 <strong>时尚杂志</strong>：ELLE → 👓 <strong>眼镜</strong>：AGEE</span>
+          <span style="display:block;font-size:12px;color:#999;margin-top:4px;">商业价值正处于高速释放期，覆盖从顶奢到国民品牌的完整链路🚀</span>
+          <div class="inline-quote">"谁懂啊！为了张凌赫周边我要冲全棉时代了💚"（25赞）—— @北京大融城 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69baa0f300000000220018f8" target="_blank">《谁懂啊！》 [小红书]</a></div>
         </div>
       </div>
 
@@ -1227,6 +1272,7 @@
           <div class="note-row-stats"><span>💬 2</span></div>
         </div>
       </div>
+      </details>
     </div>
 
     <!-- ============ 分类五：归鸾新剧动态 ============ -->
@@ -1240,15 +1286,15 @@
       <div class="analysis-block">
         <div class="analysis-title">📝 内容总结</div>
         <div class="analysis-text">
-          <strong>🔹 核心内容</strong>
-          张凌赫新剧《归鸾》3月18日已进入拍摄阶段，当日大量出/进妆花絮流出。粉丝在片场周边拍摄到张凌赫的妆造，"惊为天人""帅得不像话"成为高频评价。
+          <strong>📸 归鸾出妆花絮大爆发！新造型"惊为天人"</strong>
+          3月18日，赫子新剧《归鸾》正式进入拍摄阶段，当天各路蹲点粉丝拍到大量出妆/进妆花絮在小红书集中涌出！新妆造引发一片尖叫——"惊为天人""帅得不像话""全体起立"刷屏评论区，进妆帖直接拿下<strong style="color:#d32f2f;">3009赞</strong>的高热度🔥
           <div class="inline-quote">"260318归鸾进妆～"（3009赞）—— @Ning的_莓莓星冰乐🍓 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba35c3000000001a02ca77" target="_blank">《260318归鸾进妆～》</a></div>
-          <div class="inline-quote">"3.18出妆，惊为天人"（10赞）—— @小菇凉 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba648c000000001a02e3c0" target="_blank">《3.18出妆，惊为天人》</a></div>
+          <div class="inline-quote">"卧槽卧槽全体起立！我不允许你们不看张凌赫！"（570赞）—— @圈一个圈 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba357f00000000230178e2" target="_blank">《卧槽卧槽全体起立！》</a></div>
 
-          <strong>🔹 粉丝期待</strong>
-          粉丝对《归鸾》期待值极高，出妆视频和图片被快速传播。多个粉丝在不同地点拍摄到花絮，"一年之后终于再见🥹"等表达体现出等待已久的激动。
+          <strong>🥹 "一年之后终于再见"——粉丝的等待值了</strong>
+          从多条花絮帖的评论区能感受到一个字：<strong>激动</strong>。有粉丝说"一年之后终于再见🥹"，有人发现赫子"偷偷抿嘴笑了"，还有人感叹"今天穿的有点帅呀"……虽然只是出妆花絮，但<strong>多条视频累计互动超4000</strong>，足见粉丝对新作品的期待值有多高！坐等正片杀我💀
           <div class="inline-quote">"318出妆｜一年之后终于再见🥹"（135赞）—— @匿名上网 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba4fef000000002301c8b9" target="_blank">《318出妆｜一年之后终于再见🥹》</a></div>
-          <div class="inline-quote">"3.18张凌赫今天穿的有点帅呀"（12赞）—— @momo小核桃💕 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba4d9c000000001a02f348" target="_blank">《3.18张凌赫今天穿的有点帅呀》</a></div>
+          <div class="inline-quote">"3.18出妆，惊为天人"（10赞）—— @小菇凉 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba648c000000001a02e3c0" target="_blank">《3.18出妆，惊为天人》</a></div>
         </div>
       </div>
 
@@ -1314,17 +1360,17 @@
       <div class="analysis-block">
         <div class="analysis-title">📝 内容总结</div>
         <div class="analysis-text">
-          <strong>🔹 核心内容</strong>
-          MAMORU（张凌赫官方粉丝站）发布的"侯爷！侯爷！马甲掉了！！"获1.6万赞，是粉丝站影响力的体现。线下应援包括：百丽门店打卡、全棉时代海报领取、霸王茶姬杯贴制作等。
+          <strong>👑 粉丝站MAMORU发力！1.6万赞镇场</strong>
+          张凌赫官方粉丝站MAMORU发的"侯爷！侯爷！马甲掉了！！"直接拿下<strong style="color:#d32f2f;">1.6万赞</strong>，在小红书粉丝站赛道属于碾压级数据，足见粉丝站的号召力和活跃度👏
           <div class="inline-quote">"侯爷！侯爷！马甲掉了！！"（16819赞）—— @MAMORU | 张凌赫 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba780200000000230177f6" target="_blank">《侯爷！侯爷！马甲掉了！！》</a></div>
 
-          <strong>🔹 社群氛围</strong>
-          粉丝社群归属感强烈，应援活动组织有序。杯贴制作、温感卡收集、全棉时代打卡领海报等形成完整的粉丝经济链条。小红书已成为张凌赫粉丝的重要社区。
+          <strong>🎯 线下应援齐开花：打卡 × 杯贴 × 收藏卡</strong>
+          粉丝的氪金力和行动力真的恐怖——百丽门店打卡、全棉时代狂奔领海报（多城商场官号都在安利）、霸王茶姬杯贴无偿分享、逐玉收藏卡上线秒抢……完整的粉丝经济链条已经跑起来了！有姐妹说"这回是真爆了"，确实是实打实的全方位爆✨
           <div class="inline-quote">"张凌赫这回是真爆了"（7赞）—— @阿稚 · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69babc9e0000000021011421" target="_blank">《张凌赫这回是真爆了》</a></div>
           <div class="inline-quote">"没出道前的张凌赫也一样很帅呀！"（6赞）—— @是美森啊~ · <a class="quote-title" href="https://www.xiaohongshu.com/explore/69ba952f000000001b022fef" target="_blank">《没出道前的张凌赫也一样很帅呀！》</a></div>
 
-          <strong>🔹 粉丝经济</strong>
-          收藏卡上线、杯贴制作分享（无偿）、温感卡收购需求……粉丝周边生态活跃，体现了高粘性和高参与度。
+          <strong>📊 社群黏性极高</strong>
+          从壁纸分享到杯贴DIY，从温感卡收购到动态壁纸更新——小红书已经是赫子粉丝的核心社区阵地，日常内容产出+互动频率远超同层级流量明星，粉丝归属感和参与度都在线💪
         </div>
       </div>
 
@@ -1378,153 +1424,13 @@
       </details>
     </div>
 
-    <!-- ============ 微博动态 ============ -->
-    <div class="section">
-      <div class="section-title">
-        <span class="icon">📱</span>
-        微博平台动态
-        <span class="badge" style="background:linear-gradient(135deg,#ff8c00,#ff4500);">微博</span>
-      </div>
-
-      <div class="analysis-block" style="border-left-color:#ff8c00;">
-        <div class="analysis-title" style="color:#ff4500;">📝 微博热点总结</div>
-        <div class="analysis-text">
-          <strong>🔹 《逐玉》数据大爆</strong>
-          3月19日，《逐玉》开播后<strong>连续8天单日播放量破亿</strong>，全网累计正片播放量达<strong>13.57亿</strong>，强势登顶2026年全网剧集正片播放量年榜榜首。正片集均播放量突破5000万，同样登顶2026年全网剧集正片集均播放量排行榜。
-          <div class="inline-quote">"连续8天破亿，《逐玉》夺2026年播放量第一" —— 快科技 · <a class="quote-title" href="https://finance.sina.com.cn/tech/roll/2026-03-19/doc-inhrmtwm9148444.shtml" target="_blank">新浪财经报道</a></div>
-
-          <strong>🔹 微博热度破亿里程碑</strong>
-          张凌赫凭借《逐玉》谢征一角，创下<strong>微博演员热度值首个破亿</strong>的里程碑。海外单日涨粉14万，腾讯、爱奇艺双平台热度均破万，云合数据市场占有率高达43.7%，成为2026开年现象级爆款。
-          <div class="inline-quote">"张凌赫成微博首个热度破亿演员，《逐玉》让他彻底出圈" —— <a class="quote-title" href="https://www.toutiao.com/article/7617104355900654121/" target="_blank">今日头条报道</a></div>
-
-          <strong>🔹 张凌赫×田曦薇跨次元微博互动</strong>
-          3月16日，田曦薇在微博发布诗意告白文案并@张凌赫，被全网解读为"隐秘告白"。张凌赫迅速以剧中身份回应，附上亲自拍摄的田曦薇片场花絮视频，引爆热度。粉丝称之为"2026最佳情侣官宣文案候选"。
-          <div class="inline-quote">"田曦薇：我记得混乱里的笑声，伸过手来的鼓励，我镜头下，你的眼睛" —— <a class="quote-title" href="http://k.sina.com.cn/article_7879776328_1d5abd84806801dbe0.html" target="_blank">新浪新闻</a></div>
-
-          <strong>🔹 品牌代言矩阵扩展</strong>
-          除已知的全棉时代、百丽外，微博渠道新增品牌动态：
-          <br>• <strong>宝格丽BVLGARI</strong>：张凌赫作为品牌大使，2026年1月正式官宣，跳过常规考察期直接空降，全球范围同步发布广告大片
-          <br>• <strong>Gucci</strong>：张凌赫身着Gucci蓝色法兰绒衬衫出席活动，启程佛罗伦萨参加品牌2026早春大秀
-          <br>• <strong>PUMA</strong>：出任新代言人，H-STREET系列瞄准下一双现象级鞋款
-          <br>• <strong>全棉时代</strong>：全球家居休闲服饰代言人，"家有全棉更舒适"主题
-          <div class="inline-quote">"顶奢认证！张凌赫宝格丽男星代言人" —— <a class="quote-title" href="http://k.sina.com.cn/article_7857201856_1d45362c001902rgj0.html" target="_blank">新浪时尚</a></div>
-
-          <strong>🔹 《逐玉》双平台破万创纪录</strong>
-          田曦薇成为内娱第一位双平台破万女演员，张凌赫则稳坐95生中唯一三平台破万男主宝座。开播仅6天刷新联播剧记录，成唯一双平台破万的联播剧，云合市占率一度飙升至41.1%。
-          <div class="inline-quote">"《逐玉》双平台热度破万，张凌赫、田曦薇飞升" —— <a class="quote-title" href="https://www.toutiao.com/article/7616217195270275618/" target="_blank">今日头条</a></div>
-        </div>
-      </div>
-
-      <!-- 微博关键数据 -->
-      <div style="margin-top:16px;">
-        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:12px;">📊 微博关键数据指标</div>
-        <div class="weibo-stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-          <div style="background:linear-gradient(135deg,#fff5f0,#ffe8e0);border:1px solid #ffccbc;border-radius:10px;padding:14px;text-align:center;">
-            <div style="font-size:24px;font-weight:700;color:#ff4500;">13.57亿</div>
-            <div style="font-size:12px;color:#888;margin-top:4px;">📺 逐玉累计播放量</div>
-          </div>
-          <div style="background:linear-gradient(135deg,#fff5f0,#ffe8e0);border:1px solid #ffccbc;border-radius:10px;padding:14px;text-align:center;">
-            <div style="font-size:24px;font-weight:700;color:#ff4500;">破亿</div>
-            <div style="font-size:12px;color:#888;margin-top:4px;">🔥 微博演员热度值</div>
-          </div>
-          <div style="background:linear-gradient(135deg,#fff5f0,#ffe8e0);border:1px solid #ffccbc;border-radius:10px;padding:14px;text-align:center;">
-            <div style="font-size:24px;font-weight:700;color:#ff4500;">43.7%</div>
-            <div style="font-size:12px;color:#888;margin-top:4px;">📈 云合市场占有率</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 微博超话数据 -->
-      <div style="margin-top:16px;">
-        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:10px;">💬 微博超话动态</div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;">
-          <span class="topic-tag hot">#逐玉 连续8天破亿</span>
-          <span class="topic-tag hot">#张凌赫 微博热度破亿</span>
-          <span class="topic-tag">#张凌赫田曦薇 微博互动</span>
-          <span class="topic-tag brand">#宝格丽 品牌大使</span>
-          <span class="topic-tag brand">#Gucci 早春大秀</span>
-          <span class="topic-tag brand">#PUMA 新代言人</span>
-          <span class="topic-tag">#逐玉 双平台破万</span>
-          <span class="topic-tag">#张凌赫 三平台破万</span>
-        </div>
-      </div>
-
-      <!-- 微博热搜相关 -->
-      <div style="margin-top:16px;">
-        <div style="font-size:14px;font-weight:600;color:#2d3436;margin-bottom:10px;">🔥 近期微博热搜相关</div>
-        <div class="top10-row">
-          <div class="top10-rank rank-1">1</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="https://finance.sina.com.cn/tech/roll/2026-03-19/doc-inhrmtwm9148444.shtml" target="_blank">连续8天破亿！《逐玉》夺2026年播放量第一</a></div>
-            <div class="top10-author">快科技 · 3/19</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥🔥🔥🔥</span></div>
-        </div>
-        <div class="top10-divider"></div>
-        <div class="top10-row">
-          <div class="top10-rank rank-2">2</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="https://www.toutiao.com/article/7617104355900654121/" target="_blank">张凌赫成微博首个热度破亿演员</a></div>
-            <div class="top10-author">今日头条 · 3/19</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥🔥🔥🔥</span></div>
-        </div>
-        <div class="top10-divider"></div>
-        <div class="top10-row">
-          <div class="top10-rank rank-3">3</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="https://new.qq.com/rain/a/20260316A057SG00" target="_blank">《逐玉》热度值破3.1万，刷新2026开播剧最高纪录</a></div>
-            <div class="top10-author">腾讯网 · 3/16</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥🔥🔥</span></div>
-        </div>
-        <div class="top10-divider"></div>
-        <div class="top10-row">
-          <div class="top10-rank rank-other">4</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="http://k.sina.com.cn/article_7879776328_1d5abd84806801dbe0.html" target="_blank">田曦薇和张凌赫跨次元微博对话引爆热度</a></div>
-            <div class="top10-author">新浪新闻 · 3/16</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥🔥🔥</span></div>
-        </div>
-        <div class="top10-divider"></div>
-        <div class="top10-row">
-          <div class="top10-rank rank-other">5</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="https://www.toutiao.com/article/7616217195270275618/" target="_blank">《逐玉》双平台破万，95花生格局大变</a></div>
-            <div class="top10-author">今日头条 · 3/15</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥🔥</span></div>
-        </div>
-        <div class="top10-divider"></div>
-        <div class="top10-row">
-          <div class="top10-rank rank-other">6</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="http://k.sina.com.cn/article_7857201856_1d45362c001902rgj0.html" target="_blank">顶奢认证！张凌赫成宝格丽品牌大使</a></div>
-            <div class="top10-author">新浪时尚 · 3月</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥🔥</span></div>
-        </div>
-        <div class="top10-divider"></div>
-        <div class="top10-row">
-          <div class="top10-rank rank-other">7</div>
-          <div class="top10-info">
-            <div class="top10-title"><a href="https://new.qq.com/rain/a/20260303A054ZO00" target="_blank">张凌赫出任PUMA新代言人</a></div>
-            <div class="top10-author">腾讯网 · 3/3</div>
-          </div>
-          <div class="top10-heat"><span class="fire">🔥🔥</span></div>
-        </div>
-      </div>
-
-      <div style="font-size:11px;color:#999;margin-top:12px;">* 微博数据通过网页搜索聚合，来源包括新浪、腾讯网、今日头条等公开报道</div>
-    </div>
 
     <!-- ============ 明星近期日程 ============ -->
     <div class="section">
       <div class="section-title">
         <span class="icon">📅</span>
         明星近期日程
-        <span class="badge">小红书信息整理</span>
+        <span class="badge">微博+小红书信息整理</span>
       </div>
 
       <!-- 日程1：百丽品牌活动 4.2 -->
@@ -1651,12 +1557,325 @@
 
     </div>
 
+    <!-- ============ 微博真实帖子汇总板块 ============ -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">🔶</span>
+        微博真实帖子汇总（3月15日—3月20日）
+        <span class="badge" style="background:#fff5f0;color:#ff4500;border:1px solid #ffccbc;">18条微博 · 6大类别</span>
+      </div>
+
+      <div style="background:#fff8f0;border:1px solid #ffe0b2;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:12px;color:#e65100;">
+        ⚠️ <strong>数据说明</strong>：以下微博均为真实帖子原文，通过搜索引擎索引和微博公开页面（d.weibo.com）提取。由于微博API强制登录限制，无法直接全量爬取，数据覆盖范围包括：明星本人、工作室、平台官方号、数据站、娱乐大V、品牌官微、媒体官微等多维度账号。互动数据为搜索时的快照值。
+      </div>
+
+      <!-- 类别1：明星本人发博 -->
+      <div class="analysis-block">
+        <div class="analysis-title">🌟 一、明星本人发博（4条）</div>
+        <div class="analysis-text">
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:linear-gradient(135deg,#ff6b6b,#ee5a24);color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">HOT</span>
+              <strong style="color:#d32f2f;">@张凌赫z</strong>
+              <span style="color:#999;font-size:12px;">3月18日 18:04</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              #逐玉# <strong>无论我是言正还是谢征，我待长玉之心从未有假。</strong>@田曦薇 📹视频
+            </div>
+            <div style="display:flex;gap:16px;font-size:12px;color:#666;">
+              <span>❤️ <strong style="color:#d32f2f;">50.6万</strong></span>
+              <span>💬 <strong>6.3万</strong></span>
+              <span>🔄 <strong>8.8万</strong></span>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/7051114584" target="_blank" style="color:#2196f3;">查看原博</a> · 当日全网最高互动单条内容</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#ff9800;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">视频</span>
+              <strong style="color:#d32f2f;">@张凌赫z</strong>
+              <span style="color:#999;font-size:12px;">3月15日 19:11</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              #逐玉# <strong>第一次拍长玉，不太熟练。</strong>@田曦薇 📹视频
+            </div>
+            <div style="display:flex;gap:16px;font-size:12px;color:#666;">
+              <span>▶️ <strong>965万次</strong>观看</span>
+              <span>❤️ <strong style="color:#d32f2f;">100万+</strong></span>
+              <span>💬 <strong>14.3万</strong></span>
+              <span>🔄 <strong>68.3万</strong></span>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/7051114584" target="_blank" style="color:#2196f3;">查看原博</a> · 近千万播放量视频博文</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#4caf50;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">ELLE</span>
+              <strong style="color:#d32f2f;">@张凌赫z</strong>
+              <span style="color:#999;font-size:12px;">3月20日 12:39</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              📷 <strong>@ELLE</strong>（ELLE四月刊封面大片转发）
+            </div>
+            <div style="display:flex;gap:16px;font-size:12px;color:#666;">
+              <span>❤️ <strong style="color:#d32f2f;">57.8万</strong></span>
+              <span>💬 <strong>7.2万</strong></span>
+              <span>🔄 <strong>13.9万</strong></span>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/7051114584" target="_blank" style="color:#2196f3;">查看原博</a> · 首登五大女刊封面</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#9c27b0;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">告白</span>
+              <strong style="color:#d32f2f;">@张凌赫z</strong>
+              <span style="color:#999;font-size:12px;">3月16日 18:28</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>如果回头看，是不是就能早一点与你重逢。</strong>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/7051114584" target="_blank" style="color:#2196f3;">查看原博</a> · 隔空呼应田曦薇诗意告白</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 类别2：合作演员 -->
+      <div class="analysis-block">
+        <div class="analysis-title">💜 二、合作演员（1条）</div>
+        <div class="analysis-text">
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#e91e63;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">告白</span>
+              <strong style="color:#c2185b;">@田曦薇</strong>
+              <span style="color:#999;font-size:12px;">3月15日</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>我记得混乱里的笑声，伸过手来的鼓励，我镜头下，你的眼睛</strong> @张凌赫
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/" target="_blank" style="color:#2196f3;">查看原博</a> · 张凌赫2分钟后发博回应，形成双向隔空告白</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 类别3：平台官方号 -->
+      <div class="analysis-block">
+        <div class="analysis-title">📺 三、平台官方号（3条）</div>
+        <div class="analysis-text">
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#00bcd4;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">腾讯</span>
+              <strong style="color:#00838f;">@腾讯视频</strong>
+              <span style="color:#999;font-size:12px;">3月18日 16:30</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              #来鹅逐玉日日甜蜜# 叮~今日份追剧福利请查收~<strong>谢征@张凌赫z 樊长玉@田曦薇 将在今晚18:00后惊喜空降正片EP27弹幕区与大家实时互动~</strong>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/2591595652" target="_blank" style="color:#2196f3;">查看原博</a> · 弹幕空降互动活动</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#00bcd4;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">腾讯</span>
+              <strong style="color:#00838f;">@腾讯视频</strong>
+              <span style="color:#999;font-size:12px;">3月15日 20:09</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#逐玉腾讯视频站内热度值破31000#</strong> 刷新腾讯视频【2025年以来古装剧热度值最高纪录】和【2026年剧集热度值最高纪录】！势如破竹，所向披靡！
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/2591595652" target="_blank" style="color:#2196f3;">查看原博</a> · 站内热度纪录官宣</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#795548;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">ELLE</span>
+              <strong style="color:#4e342e;">@ELLE</strong>
+              <span style="color:#999;font-size:12px;">3月19日</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>张凌赫首登五大女刊《ELLE》四月刊封面</strong> · 开售1分钟9万本，15分钟22万本，销售额突破1000万
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/1273610165" target="_blank" style="color:#2196f3;">查看原博</a> · 创95后男演员女刊销售速度纪录</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 类别4：数据站/粉丝站 -->
+      <div class="analysis-block">
+        <div class="analysis-title">📊 四、数据站 & 粉丝站（5条）</div>
+        <div class="analysis-text">
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#ff5722;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">猫眼</span>
+              <strong style="color:#bf360c;">@喵喵看戏（猫眼专业版数据站）</strong>
+              <span style="color:#999;font-size:12px;">3月16日左右</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#逐玉有效播放量破16亿#</strong> 据猫眼专业版数据，@张凌赫z @田曦薇 领衔主演网络剧《逐玉》热播中，全网有效播放量破16亿！
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/1153928105" target="_blank" style="color:#2196f3;">查看原博</a></div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#ff5722;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">猫眼</span>
+              <strong style="color:#bf360c;">@喵喵看戏</strong>
+              <span style="color:#999;font-size:12px;">3月16日</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#逐玉三榜霸榜#</strong> 分别登顶2026年第10周猫眼剧集热度、有效播放和集均有效播放周榜。截至目前，累计有效播放已超11.62亿。
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/1153928105" target="_blank" style="color:#2196f3;">查看原博</a></div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#ff5722;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">猫眼</span>
+              <strong style="color:#bf360c;">@喵喵看戏</strong>
+              <span style="color:#999;font-size:12px;">3月14日左右</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#逐玉有效播放量破11亿#</strong> / <strong>#逐玉有效播放量破9亿#</strong> 全网有效播放量持续攀升
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/1153928105" target="_blank" style="color:#2196f3;">查看原博</a></div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#3f51b5;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">粉丝站</span>
+              <strong style="color:#283593;">@剧综劳模小超</strong>
+              <span style="color:#999;font-size:12px;">3月19日</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>张凌赫《ELLE》四月刊15分钟销量战报</strong> · 1分钟破9万+（400万），10分钟破21万+（926万），15分钟破22万+（1000万）。爆剧男主应得的 三平台破万！
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/5809691296" target="_blank" style="color:#2196f3;">查看原博</a></div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#3f51b5;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">工作室</span>
+              <strong style="color:#283593;">@张凌赫工作室official</strong>
+              <span style="color:#999;font-size:12px;">3月15日 15:00</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              #张凌赫谢征# <strong>「赫影放映厅」🎥 傲骨承风雨，金戈破千钧。</strong>谢征@张凌赫z 素手执伞，静待风起。3月6日，#逐玉# 相见。
+            </div>
+            <div style="display:flex;gap:16px;font-size:12px;color:#666;">
+              <span>❤️ <strong>9171</strong></span>
+              <span>💬 <strong>1376</strong></span>
+              <span>🔄 <strong>1297</strong></span>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/" target="_blank" style="color:#2196f3;">查看原博</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 类别5：媒体官微 -->
+      <div class="analysis-block">
+        <div class="analysis-title">📰 五、媒体官微（2条）</div>
+        <div class="analysis-text">
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#607d8b;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">媒体</span>
+              <strong style="color:#37474f;">@封面新闻</strong>
+              <span style="color:#999;font-size:12px;">3月18日 16:16</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#逐玉张凌赫萌宠实为拼接款#</strong> 专家揭其"神秘面纱"。#谢征隼隼哪里有同款# 国家动物博物馆科普主管王传齐表示：《逐玉》中这只鸟的造型在现实中不存在，是多种猛禽特征的"拼接款"。 #张凌赫[超话]#
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="http://finance.sina.com.cn/jjxw/2026-03-18/doc-inhrmihr9267653.shtml" target="_blank" style="color:#2196f3;">查看原博</a> · 封面新闻记者采访国家动物博物馆</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#607d8b;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">媒体</span>
+              <strong style="color:#37474f;">@羊城晚报</strong>
+              <span style="color:#999;font-size:12px;">3月15日左右</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              #逐玉爱奇艺破万# 【#张凌赫逐玉剧宣状态#】今晚，<strong>#逐玉追剧团# 直播开启，@张凌赫工作室official 发布12张高清图</strong>
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="http://k.sina.com.cn/article_1497087080_593bbc6804001aiw4.html" target="_blank" style="color:#2196f3;">查看原博</a> · 羊城晚报官方微博转发</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 类别6：娱乐大V & 品牌官微 -->
+      <div class="analysis-block">
+        <div class="analysis-title">🎯 六、娱乐大V & 品牌官微（3条）</div>
+        <div class="analysis-text">
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#673ab7;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">大V</span>
+              <strong style="color:#4527a0;">@热门剧速递</strong>
+              <span style="color:#999;font-size:12px;">3月18日左右</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#谢征一秒开夹#</strong> 被拒绝后睡不着去瀑布边打鱼…谢征的凶巴巴瞬间融化，夹子音上线："你怎么来了？！" · <strong>#张凌赫回了田曦薇#</strong> 隔空对话让我们看到了演员与角色的奇妙联结
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/u/5126965825" target="_blank" style="color:#2196f3;">查看原博</a> · 剧情讨论+CP互动梳理</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#673ab7;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">大V</span>
+              <strong style="color:#4527a0;">@扒掌门</strong>
+              <span style="color:#999;font-size:12px;">3月18日左右</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>#谢征表白樊长玉再次被拒#</strong> 谢征看到受伤的樊长玉，又忍不住表白了，不过这次依旧被拒绝。樊长玉一心喜欢言正，但谢征说不管什么身份都喜欢樊长玉。小两口快别闹了！
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/zhangmenn" target="_blank" style="color:#2196f3;">查看原博</a> · 娱乐大V剧情讨论</div>
+          </div>
+
+          <div style="background:white;border:1px solid #f0f0f0;border-radius:10px;padding:14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="background:#009688;color:white;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;">品牌</span>
+              <strong style="color:#00695c;">@全棉时代（品牌官微）</strong>
+              <span style="color:#999;font-size:12px;">3月18日</span>
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:#333;margin-bottom:8px;">
+              <strong>家有全棉更舒适 | 全棉时代官宣张凌赫为家居休闲服饰全球代言人</strong>。共同探寻从一朵棉花到日常生活的舒适哲学，传递舒适、健康、环保的全棉生活方式。
+            </div>
+            <div style="font-size:11px;color:#999;margin-top:6px;">🔗 <a href="https://weibo.com/" target="_blank" style="color:#2196f3;">查看原博</a> · 品牌官宣全球代言人</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 微博热搜词条汇总 -->
+      <div class="analysis-block">
+        <div class="analysis-title">🔥 微博热搜词条汇总（3月15日—3月18日期间出现）</div>
+        <div class="analysis-text">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉腾讯视频站内热度值破31000#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉爱奇艺破万#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉有效播放量破16亿#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉三榜霸榜#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#来鹅逐玉日日甜蜜#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#张凌赫逐玉剧宣状态#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#张凌赫谢征#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#谢征一秒开夹#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#张凌赫回了田曦薇#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#谢征表白樊长玉再次被拒#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉张凌赫萌宠实为拼接款#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#谢征隼隼哪里有同款#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#樊长玉否认与谢征关系#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉有效播放量破11亿#</span>
+            <span style="background:#fff0f0;border:1px solid #ffcdd2;border-radius:16px;padding:4px 12px;font-size:12px;color:#c62828;font-weight:500;">#逐玉有效播放量破9亿#</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 页脚 -->
     <div class="footer">
-      <p>📊 数据来源：小红书平台 + 微博平台（公开报道聚合）| 日期：2026年3月18日（北京时间）</p>
-      <p>🔍 搜索关键词："张凌赫" | 小红书数据采集：四维度翻页抓取 | 微博数据采集：公开新闻聚合</p>
-      <p>共抓取240条去重后得到88篇3月18日笔记 | 总互动量：253,903</p>
-      <p style="margin-top:8px;">📈 统计：总点赞 209,302 | 总收藏 17,440 | 总评论 6,572 | 总分享 19,589</p>
+      <p>📊 数据来源：小红书平台（笔记抓取）+ 微博平台（真实微博帖子抓取）| 日期：2026年3月18日（北京时间）</p>
+      <p>🔍 搜索关键词："张凌赫" | 小红书：四维度翻页抓取240条去重88篇 | 微博：18条真实微博帖子（明星本人4条 + 合作演员1条 + 平台官方3条 + 数据站5条 + 媒体2条 + 大V/品牌3条）</p>
+      <p>📕 小红书互动：总点赞 209,302 | 总收藏 17,440 | 总评论 6,572 | 总分享 19,589</p>
+      <p>🔶 微博核心数据：@张凌赫z 单条50.6万赞（最新快照）| 逐玉有效播放16亿+（猫眼）| 云合市占率53.2% | 腾讯热度31000+</p>
+      <p>🔶 微博帖子覆盖账号：@张凌赫z @田曦薇 @腾讯视频 @ELLE @喵喵看戏 @剧综劳模小超 @张凌赫工作室official @封面新闻 @羊城晚报 @热门剧速递 @扒掌门 @全棉时代</p>
+      <p style="margin-top:8px;font-size:12px;">⚠️ 本报告微博数据来源为真实微博帖子原文，通过搜索引擎索引和d.weibo.com热门页面提取。因微博API强制登录限制无法全量爬取，如需更完整数据建议提供微博登录cookie。</p>
     </div>
 
   </div>
